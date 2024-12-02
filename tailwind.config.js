@@ -145,6 +145,9 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
+      screens: {
+        "2xl": "1440px",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
