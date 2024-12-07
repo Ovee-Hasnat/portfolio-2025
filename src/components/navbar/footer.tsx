@@ -19,14 +19,15 @@ const socials = [
 
 export default function Footer() {
   const d = new Date();
-  let year = d.getFullYear();
+  const year = d.getFullYear();
+
   return (
     <footer className="bg-zinc-950 font-display">
       <div className="max-w-screen-2xl mx-auto py-14 lg:py-24 text-zinc-700 px-10">
         <p className="border-b border-zinc-800 text-zinc-800 pb-2 text-end text-sm tracking-wider">
           coded with 🤍
         </p>
-        <div className="my-10 flex flex-col md:flex-row items-end justify-between gap-10">
+        <div className="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <div className="flex-1 max-w-sm">
             <h4 className="text-lg tracking-widest">let's connect.</h4>
 
@@ -63,7 +64,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl xl:text-8xl bg-gradient-to-b from-zinc-900/80 to-black inline-block text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-6xl xl:text-8xl bg-gradient-to-b from-zinc-900/60 via-zinc-900/40 to-black inline-block text-transparent bg-clip-text">
             &#xa9; {year}
           </h1>
         </div>
