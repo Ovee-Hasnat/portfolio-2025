@@ -1,4 +1,17 @@
-export default function ExpCard({ data }) {
+interface ExpCardData {
+  period: string;
+  website: string;
+  logo: string;
+  company: string;
+  title: string;
+  type: string;
+}
+
+interface ExpCardProps {
+  data: ExpCardData; // Define the type for the data prop
+}
+
+export default function ExpCard({ data }: ExpCardProps) {
   return (
     <div className="border border-zinc-900 p-6 rounded-2xl text-zinc-700 h-full">
       {/* Title & Date */}
@@ -7,11 +20,13 @@ export default function ExpCard({ data }) {
           {data?.period}
         </h3>
         {/* Logo */}
-        <img
-          src={data?.logo}
-          alt="SSL"
-          className="h-7 md:h-9 filter grayscale opacity-20 hover:opacity-40 object-contain"
-        />
+        <a href={data?.website} target="_blank">
+          <img
+            src={data?.logo}
+            alt="SSL"
+            className="h-7 md:h-8 filter grayscale opacity-20 hover:opacity-40 object-contain"
+          />
+        </a>
       </div>
       <h4 className="font-semibold mt-2">{data?.company}</h4>
       <h5 className="text-sm font-light">

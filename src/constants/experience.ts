@@ -6,6 +6,7 @@ export const experience = [
     type: "fulltime",
     dates: "2024 - present",
     logo: "/images/company/logo_ssl.png",
+    website: "https://solutionspin.com/",
     description:
       "Worked on various projects, including a web application and a mobile app.",
   },
@@ -16,6 +17,7 @@ export const experience = [
     type: "Contractual",
     dates: "2023",
     logo: "/images/company/logo_tsf.png",
+    website: "https://techsolutionfactory.com/",
     description:
       "Led the development of a new mobile application and a web application for a local business.",
   },
@@ -26,6 +28,7 @@ export const experience = [
     type: "trainee - fulltime",
     dates: "2023",
     logo: "/images/company/logo_ascent.png",
+    website: "https://ascent-bd.com/",
     description:
       "Led the development of a new mobile application and a web application for a local business.",
   },

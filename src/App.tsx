@@ -1,13 +1,29 @@
 import { ReactLenis } from "lenis/react";
-import Hero from "./components/home/hero";
-import Experience from "./components/experience/experience";
+import Home from "./pages/home";
+import About from "./pages/about/about";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Footer from "./components/navbar/footer";
+import NotFound from "./pages/notFound";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
 
 function App() {
   return (
     <ReactLenis root options={{ duration: 1.5, wheelMultiplier: 1.5 }}>
-      <Hero />
-      <Experience />
+      <RouterProvider router={router} />
       <Footer />
     </ReactLenis>
   );
