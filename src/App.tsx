@@ -4,6 +4,7 @@ import About from "./pages/about/about";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Footer from "./components/navbar/footer";
 import NotFound from "./pages/notFound";
+import Contact from "./pages/contact";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
   {
     path: "*",

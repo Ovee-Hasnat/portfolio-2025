@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const navigation = [
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
@@ -9,13 +11,13 @@ export default function NavForHero() {
     <nav className="mb-20 animate-fade-in">
       <ul className="flex items-center justify-center gap-5">
         {navigation.map((item) => (
-          <a
+          <Link
             key={item.href}
-            href={item.href}
+            to={item.href}
             className="text-xs sm:text-sm duration-500 text-zinc-700 hover:text-zinc-300"
           >
             {item.name}
-          </a>
+          </Link>
         ))}
       </ul>
     </nav>
