@@ -5,8 +5,8 @@ import Scrambles from "../common/scrambles";
 
 export default function Hero() {
   return (
-    <section>
-      <div className="flex flex-col items-center justify-center h-screen relative overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+    <section className="h-screen relative overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      <div className="flex flex-col items-center justify-center h-screen">
         <NavForHero />
 
         <Particles

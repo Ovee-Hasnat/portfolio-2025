@@ -1,3 +1,4 @@
+import ParallaxText from "@/components/common/ParallaxText";
 import SectionTitle from "@/components/common/sectionTitle";
 import PrimaryNav from "@/components/navbar/primaryNav";
 
@@ -9,6 +10,11 @@ export default function About() {
         <SectionTitle title={"About"} />
         About
       </div>
+
+      <section className="my-20 text-8xl">
+        <ParallaxText baseVelocity={-4}>Framer Motion</ParallaxText>
+        <ParallaxText baseVelocity={4}>Scroll velocity</ParallaxText>
+      </section>
     </div>
   );
 }

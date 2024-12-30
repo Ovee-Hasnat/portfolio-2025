@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Footer from "./components/navbar/footer";
 import NotFound from "./pages/notFound";
 import Contact from "./pages/contact";
+import { Toaster } from "@/components/ui/toaster";
 
 const router = createBrowserRouter([
   {
@@ -27,9 +28,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <ReactLenis root options={{ duration: 1.5, wheelMultiplier: 1.5 }}>
+    <ReactLenis root options={{ duration: 1.5, wheelMultiplier: 1.1 }}>
       <RouterProvider router={router} />
       <Footer />
+      <Toaster />
     </ReactLenis>
   );
 }

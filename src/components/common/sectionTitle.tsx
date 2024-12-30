@@ -1,6 +1,6 @@
 export default function SectionTitle({ title }: { title: string }) {
   return (
-    <div className="my-14 relative text-center select-none">
+    <div className="py-14 relative text-center select-none">
       <h2 className="text-4xl sm:text-5xl font-light tracking-[7px] md:tracking-[15px] uppercase bg-gradient-to-b from-zinc-900 to-black inline-block text-transparent bg-clip-text">
         {title}
       </h2>
