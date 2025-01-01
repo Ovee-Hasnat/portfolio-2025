@@ -6,7 +6,7 @@ export default function Expertise() {
     <section className="bg-gradient-to-l from-black to-zinc-600/20">
       <SectionTitle title={"Expertise"} />
 
-      <div className="md:pt-10 pb-24 text-xl md:text-3xl font-mono lowercase">
+      <div className="md:pt-10 pb-24 text-xl md:text-2xl font-mono lowercase">
         <ParallaxText baseVelocity={-2}>
           <div className="flex gap-20">
             <p>JavaScript</p>
@@ -14,6 +14,7 @@ export default function Expertise() {
             <p>Next.js</p>
             <p>TypeScript</p>
             <p>Redux</p>
+            <p>Tailwind CSS</p>
           </div>
         </ParallaxText>
         <ParallaxText baseVelocity={2}>

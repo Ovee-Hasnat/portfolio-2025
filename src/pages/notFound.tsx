@@ -7,10 +7,7 @@ export default function NotFound() {
     <div className="h-screen relative overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <PrimaryNav />
 
-      <Particles
-        className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={150}
-      />
+      <Particles className="absolute inset-0 -z-10" quantity={150} />
 
       <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 flex items-center justify-center flex-col h-[80%]">
         <h1
