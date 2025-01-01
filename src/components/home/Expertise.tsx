@@ -7,16 +7,16 @@ export default function Expertise() {
       <SectionTitle title={"Expertise"} />
 
       <div className="md:pt-10 pb-24 text-xl md:text-3xl font-mono lowercase">
-        <ParallaxText baseVelocity={-3}>
+        <ParallaxText baseVelocity={-2}>
           <div className="flex gap-20">
             <p>JavaScript</p>
             <p>React.js</p>
-            <p>Redux</p>
             <p>Next.js</p>
-            <p>Framer</p>
+            <p>TypeScript</p>
+            <p>Redux</p>
           </div>
         </ParallaxText>
-        <ParallaxText baseVelocity={3}>
+        <ParallaxText baseVelocity={2}>
           <div className="flex gap-20">
             <p>Node.js</p>
             <p>PHP</p>
@@ -25,8 +25,6 @@ export default function Expertise() {
             <p>MongoDB</p>
           </div>
         </ParallaxText>
-        {/* <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
-        <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText> */}
       </div>
     </section>
   );
