@@ -33,7 +33,6 @@ export default function Contact() {
   const handleCopyClick = async () => {
     try {
       await window.navigator.clipboard.writeText("hasnat.ovee@gmail.com");
-      // alert("Copied to clipboard!");
       toast({
         description: "Email address has been copied.",
         duration: 3000,
