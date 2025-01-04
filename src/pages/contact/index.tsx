@@ -47,7 +47,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <PrimaryNav />
-      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 h-full mt-14 xl:mt-32 mb-10">
+      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 h-full mt-14 mb-10">
         <p className="mb-10 font-light tracking-wide text-sm md:text-base text-zinc-500 text-center animate-fade-in">
           <b>Let's discuss</b> the next big idea. 💡
         </p>

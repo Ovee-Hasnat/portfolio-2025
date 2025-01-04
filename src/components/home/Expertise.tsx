@@ -1,12 +1,31 @@
-import SectionTitle from "../common/sectionTitle";
+import { motion, useInView } from "motion/react";
 import ParallaxText from "../common/ParallaxText";
+import { useRef } from "react";
 
 export default function Expertise() {
+  const ref = useRef(null);
+  // const isInView = useInView(ref, { once: true });
+
   return (
     <section className="bg-gradient-to-l from-black to-zinc-600/20">
-      <SectionTitle title={"Expertise"} />
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.5,
+            delay: 0.3,
+            ease: "linear",
+          },
+        }}
+        viewport={{ amount: 0.8 }}
+        className="text-zinc-800 lowercase italic font-light text-center text-xl animate-fade-in pt-12"
+      >
+        Driven by expertise in &#x2713;
+      </motion.h2>
 
-      <div className="md:pt-10 pb-24 text-xl md:text-2xl font-mono lowercase">
+      <div className="pt-16 pb-24 text-xl md:text-2xl font-mono lowercase">
         <ParallaxText baseVelocity={-2}>
           <div className="flex gap-20">
             <p>JavaScript</p>

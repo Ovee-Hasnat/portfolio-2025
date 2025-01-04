@@ -2,6 +2,8 @@ import Particles from "../common/particles";
 import HeroText from "./heroText";
 import NavForHero from "../navbar/navForHero";
 import Scrambles from "../common/scrambles";
+import { buttonVariants } from "../ui/button";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -17,10 +19,14 @@ export default function Hero() {
         <HeroText />
 
         <div className="my-4 text-center animate-fade-in">
-          <h2 className="text-xs sm:text-sm text-zinc-700 ">
+          <h2 className="text-sm text-zinc-700 lowercase">
             Software Engineer | Photographer | Learner
           </h2>
         </div>
+
+        {/* <Link to="/contact" className={buttonVariants({ variant: "outline" })}>
+          open to work - let's talk
+        </Link> */}
 
         <Scrambles />
       </div>
