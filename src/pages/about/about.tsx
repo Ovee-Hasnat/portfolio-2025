@@ -1,4 +1,3 @@
-import SectionTitle from "@/components/common/sectionTitle";
 import PrimaryNav from "@/components/navbar/primaryNav";
 import photo from "/images/profile/profile_1.webp";
 
@@ -17,14 +16,14 @@ export default function About() {
     <div className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
       <PrimaryNav />
       <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 my-10">
-        <h2 className="text-8xl font-thin lowercase">
+        <h2 className="text-7xl font-thin lowercase">
           Creative <br /> Developer
         </h2>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="max-w-[400px] mt-4"
+          className="max-w-[370px] mt-4"
         >
           <img
             src={photo}

@@ -2,13 +2,11 @@ import Particles from "../common/particles";
 import HeroText from "./heroText";
 import NavForHero from "../navbar/navForHero";
 import Scrambles from "../common/scrambles";
-import { buttonVariants } from "../ui/button";
-import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
     <section className="h-screen relative overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <div className="flex flex-col items-center justify-center h-screen">
+      <div className="flex flex-col items-center justify-center h-screen container mx-auto">
         <NavForHero />
 
         <Particles
@@ -19,7 +17,7 @@ export default function Hero() {
         <HeroText />
 
         <div className="my-4 text-center animate-fade-in">
-          <h2 className="text-sm text-zinc-700 lowercase">
+          <h2 className="text-sm md:text-base text-zinc-700 lowercase">
             Software Engineer | Photographer | Learner
           </h2>
         </div>

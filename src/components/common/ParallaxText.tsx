@@ -67,7 +67,7 @@ export default function ParallaxText({
   return (
     <div className="parallax">
       <motion.div
-        className="scroller text-zinc-800/60 cursor-default select-none"
+        className="scroller text-zinc-800 cursor-default select-none"
         style={{ x }}
       >
         <span>{children} </span>

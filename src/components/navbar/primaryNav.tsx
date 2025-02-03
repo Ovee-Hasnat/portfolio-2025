@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo_gif from "/images/logo/short_logo.gif";
 
 const navigation = [
-  // { name: "Home", href: "/" },
+  { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },

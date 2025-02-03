@@ -14,8 +14,9 @@ export default function Scrambles() {
     });
 
     const phrases = [
-      "building things for the web since 2023.",
-      "always learning, open to critique.",
+      "crafting seamless digital experiences since 2023.",
+      "fueling your digital success.",
+      "reliable. skilled. let’s Build Together.",
       "'改善.' kaizen. continual improvement.",
     ];
     writer.queueWrite(phrases, 3000, true);
@@ -25,7 +26,7 @@ export default function Scrambles() {
       style={{ y }}
       className="mt-24 text-center animate-fade-in select-none"
     >
-      <p className="text text-xs sm:text-sm text-zinc-700 font-light font-mono"></p>
+      <p className="text text-xs md:text-base text-zinc-700 font-light font-mono"></p>
     </motion.div>
   );
 }

@@ -12,31 +12,29 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="bg-gradient-to-l from-black to-zinc-600/20">
-      <motion.div
-        style={{ y }}
-        className="min-h-screen bg-zinc-950 max-w-screen-2xl rounded-3xl mx-auto p-6"
+    <motion.div
+      style={{ y }}
+      className="min-h-screen bg-zinc-950 max-w-screen-2xl rounded-3xl mx-auto p-6"
+    >
+      <SectionTitle title={"Experience"} />
+
+      <div
+        ref={ref}
+        style={{
+          transform: isInView ? "none" : "translateY(100px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+        className="grid lg:grid-cols-2 gap-6 pt-4 lg:pt-14 max-w-screen-lg mx-auto"
       >
-        <SectionTitle title={"Experience"} />
-
-        <div
-          ref={ref}
-          style={{
-            transform: isInView ? "none" : "translateY(100px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-          }}
-          className="grid lg:grid-cols-2 gap-6 pt-4 lg:pt-14 max-w-screen-lg mx-auto"
-        >
-          <div className="lg:row-span-2">
-            <ExpCard data={experience[0]} />
-          </div>
-
-          <ExpCard data={experience[1]} />
-
-          <ExpCard data={experience[2]} />
+        <div className="lg:row-span-2">
+          <ExpCard data={experience[0]} />
         </div>
-      </motion.div>
-    </div>
+
+        <ExpCard data={experience[1]} />
+
+        <ExpCard data={experience[2]} />
+      </div>
+    </motion.div>
   );
 }
