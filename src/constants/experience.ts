@@ -7,8 +7,28 @@ export const experience = [
     dates: "2024 - present",
     logo: "/images/company/logo_ssl.png",
     website: "https://solutionspin.com/",
-    description:
-      "Worked on various projects, including a web application and a mobile app.",
+    contributions: [
+      {
+        project: "Alljobs by Teletalk",
+        link: "https://alljobs.teletalk.com.bd/",
+      },
+      {
+        project: "Selftest",
+        link: "https://selftest.teletalk.com.bd/",
+      },
+      {
+        project: "Vision Limo",
+        link: "https://visionlimogroup.com/",
+      },
+      {
+        project: "Bracnet Connect",
+        link: "https://bracnetconnect.net/",
+      },
+      {
+        project: "Accounting Software for JSTU",
+        link: null,
+      },
+    ],
   },
   {
     period: "2024",
@@ -18,8 +38,16 @@ export const experience = [
     dates: "2023",
     logo: "/images/company/logo_tsf.png",
     website: "https://techsolutionfactory.com/",
-    description:
-      "Led the development of a new mobile application and a web application for a local business.",
+    contributions: [
+      {
+        project: "Shipper's Council Bangladesh",
+        link: "https://scbdhk.org.bd/",
+      },
+      {
+        project: "Smart Jute Information Software",
+        link: "https://sjis.dgjute.gov.bd/",
+      },
+    ],
   },
   {
     period: "2023",
@@ -29,8 +57,12 @@ export const experience = [
     dates: "2023",
     logo: "/images/company/logo_ascent.png",
     website: "https://ascent-bd.com/",
-    description:
-      "Led the development of a new mobile application and a web application for a local business.",
+    contributions: [
+      {
+        project: "Workfreeli",
+        link: "https://work.freeli.io/",
+      },
+    ],
   },
   // Add more experiences here...
 ];

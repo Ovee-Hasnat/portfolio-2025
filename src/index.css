@@ -79,12 +79,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .an-ease {
+    @apply duration-300 ease-in-out transition-all;
+  }
 }
 
 /* Custom Scroll Bar */
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 /* Track */
@@ -95,7 +99,7 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #222;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /* Handle on hover */

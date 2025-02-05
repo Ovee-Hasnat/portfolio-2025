@@ -5,6 +5,7 @@ interface ExpCardData {
   company: string;
   title: string;
   type: string;
+  contributions: { project: string; link: string | null }[];
 }
 
 interface ExpCardProps {
@@ -13,7 +14,7 @@ interface ExpCardProps {
 
 export default function ExpCard({ data }: ExpCardProps) {
   return (
-    <div className="border border-zinc-900 p-6 rounded-2xl text-zinc-700 h-full hover:text-zinc-600 group duration-300 ease-in-out">
+    <div className="h-fit border border-zinc-900/40 p-6 rounded-2xl text-zinc-700 hover:text-zinc-500 hover:border-zinc-900 group an-ease">
       {/* Title & Date */}
       <div className="flex gap-5 justify-between">
         <h3 className="text-4xl md:text-5xl font-display uppercase bg-gradient-to-b from-zinc-800 via-zinc-900/70 to-black inline-block text-transparent bg-clip-text">
@@ -28,13 +29,32 @@ export default function ExpCard({ data }: ExpCardProps) {
           />
         </a>
       </div>
-      <h4 className="md:text-lg font-semibold mt-2">{data?.company}</h4>
+      <h4 className="md:text-lg font-semibold mt-3">{data?.company}</h4>
       <h5 className="text-sm font-light">
         {data?.title} / <span className="italic lowercase">{data?.type}</span>
       </h5>
 
       {/* Description */}
-      <div></div>
+      <div className="mt-6 font-light text-sm md:text-base">
+        <h4 className="italic mb-3">Contributed to -</h4>
+        <ul className="space-y-1 ml-3">
+          {data?.contributions?.map((project) => (
+            <li>
+              {project?.link ? (
+                <a
+                  href={project?.link}
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  {project?.project}
+                </a>
+              ) : (
+                <span className="hover:underline">{project?.project}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

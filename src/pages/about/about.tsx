@@ -12,6 +12,8 @@ export default function About() {
   }, [scrollYProgress]);
 
   const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  console.log(y);
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
       <PrimaryNav />
