@@ -18,7 +18,7 @@ export default function CTA_Home() {
   return (
     <motion.div
       style={{ y }}
-      className="text-zinc-800 bg-zinc-950 max-w-screen-2xl rounded-3xl mx-auto px-6 py-12 md:py-24 md:px-16 cursor-default select-none flex flex-wrap gap-20 items-center justify-between"
+      className="text-zinc-800 bg-zinc-950 max-w-screen-2xl rounded-3xl mx-auto px-6 py-12 md:py-24 md:px-16 cursor-default select-none flex flex-wrap gap-20 items-center justify-between section-reveal"
     >
       <div
         ref={ref}
@@ -35,7 +35,7 @@ export default function CTA_Home() {
             <HoverCardTrigger>
               <i className="text-white/80 cursor-pointer leading-none">MVP</i>
             </HoverCardTrigger>
-            <HoverCardContent className="text-lg font-normal tracking-normal bg-zinc-900 text-zinc-600 border-none font-mono">
+            <HoverCardContent className="text-base md:text-lg font-normal tracking-normal bg-zinc-900 text-zinc-600 border-none font-mono">
               Most Valuable Player.
             </HoverCardContent>
           </HoverCard>{" "}
@@ -52,7 +52,7 @@ export default function CTA_Home() {
         }}
       >
         <Drawer>
-          <h4 className="text-xl text-zinc-600 text-right font-light">
+          <h4 className="text-lg md:text-xl text-zinc-600 text-right font-light">
             Ready to Grow?{" "}
             <DrawerTrigger>
               <span className="text-white opacity-85 hover:opacity-100 an-ease cursor-pointer underline decoration-zinc-700">

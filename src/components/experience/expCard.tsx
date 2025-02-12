@@ -14,7 +14,7 @@ interface ExpCardProps {
 
 export default function ExpCard({ data }: ExpCardProps) {
   return (
-    <div className="h-fit border border-zinc-900/40 p-6 rounded-2xl text-zinc-700 hover:text-zinc-500 hover:border-zinc-900 group an-ease">
+    <div className="h-fit p-6 rounded-2xl text-zinc-500 group an-ease">
       {/* Title & Date */}
       <div className="flex gap-5 justify-between">
         <h3 className="text-4xl md:text-5xl font-display uppercase bg-gradient-to-b from-zinc-800 via-zinc-900/70 to-black inline-block text-transparent bg-clip-text">
@@ -38,18 +38,24 @@ export default function ExpCard({ data }: ExpCardProps) {
       <div className="mt-6 font-light text-sm md:text-base">
         <h4 className="italic mb-3">Contributed to -</h4>
         <ul className="space-y-1 ml-3">
-          {data?.contributions?.map((project) => (
-            <li>
+          {data?.contributions?.map((project, i) => (
+            <li key={i}>
               {project?.link ? (
-                <a
-                  href={project?.link}
-                  target="_blank"
-                  className="hover:underline"
-                >
-                  {project?.project}
-                </a>
+                <>
+                  &#x2713;{" "}
+                  <a
+                    href={project?.link}
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    {project?.project}
+                  </a>
+                </>
               ) : (
-                <span className="hover:underline">{project?.project}</span>
+                <>
+                  &#x2713;{" "}
+                  <span className="hover:underline">{project?.project}</span>
+                </>
               )}
             </li>
           ))}

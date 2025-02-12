@@ -4,6 +4,7 @@ import ExpCard from "./expCard";
 import { experience } from "@/constants/experience";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { Card } from "../common/card";
 
 export default function Experience() {
   const { scrollYProgress } = useScroll();
@@ -15,7 +16,7 @@ export default function Experience() {
   return (
     <motion.div
       style={{ y }}
-      className="bg-zinc-950 max-w-screen-2xl rounded-3xl mx-auto p-6"
+      className="bg-zinc-950 max-w-screen-2xl rounded-3xl mx-auto p-6 section-reveal"
     >
       <SectionTitle title={"Experience"} />
 
@@ -30,21 +31,26 @@ export default function Experience() {
         // className="columns-1 lg:columns-2 gap-6 p-4"
       >
         <div className="row-span-2">
-          <ExpCard data={experience[0]} />
+          <Card>
+            <ExpCard data={experience[0]} />
+          </Card>
+
           <Link
             to={"/projects"}
-            className="block group text-center mt-6 border border-zinc-900/40 py-16 rounded-2xl text-zinc-700 hover:text-zinc-600 hover:border-zinc-900 an-ease"
+            className="block group text-sm md:text-base text-center mt-6 border hover:border-zinc-500/50 border-zinc-800 py-16 rounded-2xl text-zinc-600 hover:text-zinc-500 an-ease font-light"
           >
-            <span className="text-white opacity-30 group-hover:opacity-100 an-ease">
-              Learn more about the projects
-            </span>{" "}
+            Learn more about the <b>projects </b>
             🚀
           </Link>
         </div>
 
-        <ExpCard data={experience[1]} />
+        <Card>
+          <ExpCard data={experience[1]} />
+        </Card>
 
-        <ExpCard data={experience[2]} />
+        <Card>
+          <ExpCard data={experience[2]} />
+        </Card>
       </div>
     </motion.div>
   );

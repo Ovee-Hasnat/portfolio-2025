@@ -28,7 +28,7 @@ const Skillset: React.FC = () => {
     <section className="pb-32">
       <SectionTitle title={"Skills"} />
       <div className="slider mt-10" style={sliderStyle}>
-        <div className="list text-white/80 text-5xl lg:text-6xl">
+        <div className="list text-white/80 text-4xl md:text-5xl lg:text-6xl">
           <div
             className="item an-ease"
             style={{ "--position": 1 } as React.CSSProperties}

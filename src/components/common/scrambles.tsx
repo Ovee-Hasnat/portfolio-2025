@@ -19,7 +19,7 @@ export default function Scrambles() {
       "reliable. skilled. let’s Build Together.",
       "'改善.' kaizen. continual improvement.",
     ];
-    writer.queueWrite(phrases, 3000, true);
+    writer.queueWrite(phrases, 3500, true);
   }, []);
   return (
     <motion.div

@@ -28,11 +28,13 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <ReactLenis root options={{ duration: 1.5, wheelMultiplier: 1.1 }}>
-      <RouterProvider router={router} />
-      <Footer />
-      <Toaster />
-    </ReactLenis>
+    <>
+      <ReactLenis root options={{ duration: 1.5, wheelMultiplier: 1.1 }}>
+        <RouterProvider router={router} />
+        <Footer />
+        <Toaster />
+      </ReactLenis>
+    </>
   );
 }
 
