@@ -26,7 +26,7 @@ export default function Scrambles() {
       style={{ y }}
       className="mt-24 text-center animate-fade-in select-none"
     >
-      <p className="text text-xs md:text-base text-zinc-700 font-light font-mono"></p>
+      <p className="text text-sm md:text-base text-zinc-700 font-light font-mono"></p>
     </motion.div>
   );
 }

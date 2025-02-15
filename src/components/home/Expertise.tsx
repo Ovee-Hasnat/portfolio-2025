@@ -3,7 +3,7 @@ import ParallaxText from "../common/ParallaxText";
 
 export default function Expertise() {
   return (
-    <section>
+    <section className="pt-24 pb-52">
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{
@@ -21,7 +21,7 @@ export default function Expertise() {
         Driven by expertise in &#x2713;
       </motion.h2>
 
-      <div className="pt-16 pb-24 text-xl md:text-3xl font-mono lowercase">
+      <div className="mt-16 text-xl md:text-3xl font-mono lowercase">
         <ParallaxText baseVelocity={-2}>
           <div className="flex gap-12 md:gap-20">
             <p>JavaScript</p>
