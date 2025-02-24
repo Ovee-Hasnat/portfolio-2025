@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 export default function MeetDev() {
   const { scrollYProgress } = useScroll();
-
-  // x moves from -400 to 100, but stops once the div goes out of view
   const x = useTransform(scrollYProgress, [0, 0.5], [-600, 400]);
 
   return (
@@ -48,7 +46,7 @@ export default function MeetDev() {
         style={{
           x,
         }}
-        className="hidden lg:block text-[200px] font-display tracking-tight text-black absolute left-0 z-0 top-20 whitespace-pre"
+        className="hidden lg:block text-[140px] font-display tracking-tighter text-black absolute left-0 z-0 top-32"
       >
         ABOUT
       </motion.h1>
