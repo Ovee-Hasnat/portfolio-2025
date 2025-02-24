@@ -8,8 +8,8 @@ export default function About() {
   const { scrollYProgress } = useScroll();
 
   useEffect(() => {
-    console.log(scrollYProgress);
-  }, [scrollYProgress]);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
   console.log(y);
@@ -17,7 +17,7 @@ export default function About() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
       <PrimaryNav />
-      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 my-10">
+      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 my-32">
         <h2 className="text-7xl font-thin lowercase">
           Creative <br /> Developer
         </h2>

@@ -1,8 +1,13 @@
 import Particles from "@/components/common/particles";
 import PrimaryNav from "@/components/navbar/primaryNav";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function NotFound() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="h-screen relative overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <PrimaryNav />
@@ -31,12 +36,11 @@ export default function NotFound() {
         </h1>
 
         <h2 className="text-center text-sm md:text-base">
-          Lost in cyberspace? Don’t worry, we’ll help you find your way{" "}
-          <span>
-            <Link to={"/"} className="underline">
-              home.
-            </Link>
-          </span>
+          Lost in cyberspace? Don’t worry, I will help you find your way{" "}
+          <Link to={"/"} className="underline">
+            home.
+          </Link>{" "}
+          🚀
         </h2>
       </div>
     </div>

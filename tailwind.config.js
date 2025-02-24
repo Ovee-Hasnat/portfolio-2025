@@ -37,9 +37,9 @@ export default {
       },
       animation: {
         "fade-in": "fade-in 1.5s ease-in-out forwards",
-        title: "title 3s ease-in forwards",
-        "fade-left": "fade-left 3s ease-in-out forwards",
-        "fade-right": "fade-right 3s ease-in-out forwards",
+        title: "title 2s ease-in forwards",
+        "fade-left": "fade-left 2s ease-in-out forwards",
+        "fade-right": "fade-right 2s ease-in-out forwards",
       },
       keyframes: {
         "fade-in": {

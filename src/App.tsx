@@ -1,6 +1,6 @@
 import { ReactLenis } from "lenis/react";
 import Home from "./pages/home";
-import About from "./pages/about/about";
+import About from "./pages/about";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Footer from "./components/navbar/footer";
 import NotFound from "./pages/notFound";
@@ -28,11 +28,13 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <ReactLenis root options={{ duration: 1.5, wheelMultiplier: 1.1 }}>
-      <RouterProvider router={router} />
-      <Footer />
-      <Toaster />
-    </ReactLenis>
+    <>
+      <ReactLenis root options={{ duration: 1.5, wheelMultiplier: 1.1 }}>
+        <RouterProvider router={router} />
+        <Footer />
+        <Toaster />
+      </ReactLenis>
+    </>
   );
 }
 

@@ -14,7 +14,7 @@ export default function NavForHero() {
           <Link
             key={item.href}
             to={item.href}
-            className="text-sm duration-500 text-zinc-700 hover:text-zinc-300"
+            className="text-sm md:text-base duration-500 text-zinc-700 hover:text-zinc-300"
           >
             {item.name}
           </Link>

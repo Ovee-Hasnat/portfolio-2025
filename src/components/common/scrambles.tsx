@@ -19,14 +19,14 @@ export default function Scrambles() {
       "reliable. skilled. let’s Build Together.",
       "'改善.' kaizen. continual improvement.",
     ];
-    writer.queueWrite(phrases, 3000, true);
+    writer.queueWrite(phrases, 3500, true);
   }, []);
   return (
     <motion.div
       style={{ y }}
       className="mt-24 text-center animate-fade-in select-none"
     >
-      <p className="text text-xs md:text-base text-zinc-700 font-light font-mono"></p>
+      <p className="text text-sm md:text-base text-zinc-700 font-light font-mono"></p>
     </motion.div>
   );
 }

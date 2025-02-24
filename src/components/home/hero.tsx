@@ -18,7 +18,8 @@ export default function Hero() {
 
         <div className="my-4 text-center animate-fade-in">
           <h2 className="text-sm md:text-base text-zinc-700 lowercase">
-            Software Engineer | Photographer | Learner
+            &#x5b; `Software Engineer`, `Photographer`, `Learner` &#x5d;
+            {/* &#x7c; */}
           </h2>
         </div>
 
