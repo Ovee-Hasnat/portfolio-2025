@@ -6,7 +6,7 @@ export default function FeaturedProjects() {
   const x = useTransform(scrollYProgress, [0.5, 1], [100, -1000]);
 
   return (
-    <section className="pb-32 md:pb-52 max-w-screen-2xl mx-auto relative">
+    <section className="pb-32 md:pb-52 max-w-screen-2xl mx-auto relative overflow-hidden">
       <SectionTitle title="Showcase" />
       <motion.h1
         style={{

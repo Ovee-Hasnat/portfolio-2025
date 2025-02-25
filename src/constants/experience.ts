@@ -14,7 +14,7 @@ export const experience = [
       },
       {
         project: "Selftest",
-        link: "https://selftest.teletalk.com.bd/",
+        link: "http://selftest-staging.solutionspin.com/",
       },
       {
         project: "Vision Limo",
