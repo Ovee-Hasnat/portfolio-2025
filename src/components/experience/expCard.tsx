@@ -29,7 +29,7 @@ export default function ExpCard({ data }: ExpCardProps) {
           />
         </a>
       </div>
-      <h4 className="md:text-lg font-semibold mt-3">{data?.company}</h4>
+      <h4 className="md:text-lg font-display mt-3">{data?.company}</h4>
       <h5 className="text-sm font-light">
         {data?.title} / <span className="italic lowercase">{data?.type}</span>
       </h5>
