@@ -14,7 +14,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
-import SectionTitle from "../common/sectionTitle";
+// import SectionTitle from "../common/sectionTitle";
 
 const Skillset: React.FC = () => {
   const sliderStyle: React.CSSProperties = {
@@ -25,10 +25,10 @@ const Skillset: React.FC = () => {
   } as React.CSSProperties;
 
   return (
-    <section className="pb-32 md:pb-40">
-      <SectionTitle title={"Skills"} />
+    <section className="pb-20 md:pb-44">
+      {/* <SectionTitle title={"Skills"} /> */}
       <div className="slider mt-10" style={sliderStyle}>
-        <div className="list text-white/80 text-4xl md:text-5xl lg:text-6xl">
+        <div className="list text-white/80 text-5xl lg:text-6xl">
           <div
             className="item an-ease"
             style={{ "--position": 1 } as React.CSSProperties}

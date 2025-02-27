@@ -55,7 +55,7 @@ export default function CTA_Home() {
           <h4 className="md:text-xl text-zinc-600 text-right font-light">
             Ready to Grow?{" "}
             <DrawerTrigger>
-              <span className="text-white opacity-85 hover:opacity-100 an-ease cursor-pointer underline decoration-zinc-700">
+              <span className="text-white/70 hover:text-white an-ease cursor-pointer underline decoration-zinc-700 font-display">
                 Let's connect
               </span>{" "}
               🙌

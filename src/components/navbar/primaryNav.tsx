@@ -11,7 +11,7 @@ const navigation = [
 
 export default function PrimaryNav() {
   return (
-    <nav className="w-full max-w-[95%] 2xl:max-w-screen-2xl px-4 md:px-8 py-2 bg-zinc-900/40 backdrop-blur-md rounded-2xl flex items-center justify-between gap-5 flex-wrap fixed top-5 left-1/2 -translate-x-1/2 z-50 shadow-md">
+    <nav className="w-full max-w-[95%] 2xl:max-w-screen-2xl px-4 md:px-8 py-2 bg-zinc-900/40 backdrop-blur-md rounded-2xl flex items-center justify-between gap-5 flex-wrap fixed top-3 left-1/2 -translate-x-1/2 z-50 shadow-md">
       <Link to="/">
         <img
           src={logo_gif}

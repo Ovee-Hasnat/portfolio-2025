@@ -7,15 +7,17 @@ export default function MeetDev() {
   const x = useTransform(scrollYProgress, [0, 0.5], [-600, 400]);
 
   return (
-    <section className="relative text-zinc-800 max-w-screen-2xl mx-auto pt-12 pb-24 lg:pt-52 lg:pb-52 px-6 flex gap-24 md:gap-40 md:items-end justify-between flex-col lg:flex-row-reverse">
+    <section className="relative text-zinc-800 max-w-screen-2xl mx-auto pt-12 pb-20 lg:pt-52 lg:pb-44 px-6 flex gap-24 md:gap-40 md:items-end justify-between flex-col lg:flex-row-reverse">
       <motion.div className="text-5xl md:text-8xl font-thin md:text-right relative z-10">
         <PiCodeLight className="md:ml-auto text-zinc-500" />
         <h2 className="mt-6">
           Meet <br /> your dev
         </h2>
       </motion.div>
-      <div className="flex-1 lg:max-w-2xl space-y-4 text-lg font-light text-zinc-700 md:text-zinc-600 text-justify relative z-10">
-        <h4>Hi, I’m Md. Abu Hasnat Ovee 👋</h4>
+      <div className="flex-1 lg:max-w-2xl space-y-4 md:text-lg font-light text-zinc-700 md:text-zinc-600 text-justify relative z-10">
+        <h4>
+          Hi, I’m <span className="font-medium text-zinc-500">Ovee</span> 👋
+        </h4>
 
         <p>
           a web developer passionate about building seamless, high-performance
@@ -33,7 +35,7 @@ export default function MeetDev() {
 
         <span className="pt-10 block">
           <Link
-            className="font-display hover:underline an-ease text-white/70 w-fit"
+            className="font-display hover:underline an-ease text-white/70 hover:text-white w-fit"
             to={"/about"}
           >
             Learn more
@@ -46,9 +48,9 @@ export default function MeetDev() {
         style={{
           x,
         }}
-        className="hidden lg:block text-[140px] font-display tracking-tighter text-black absolute left-0 z-0 top-32"
+        className="hidden lg:block text-[120px] font-display tracking-tighter text-black absolute left-0 z-0 top-32"
       >
-        ABOUT
+        About
       </motion.h1>
     </section>
   );
