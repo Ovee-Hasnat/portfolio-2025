@@ -83,6 +83,10 @@
   .an-ease {
     @apply duration-300 ease-in-out transition-all;
   }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
 }
 
 @keyframes appear {

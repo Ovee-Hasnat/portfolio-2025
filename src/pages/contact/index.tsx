@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 import { Card } from "@/components/common/card";
-import PrimaryNav from "@/components/navbar/primaryNav";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
@@ -45,10 +44,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <PrimaryNav />
-      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 h-full mt-32 mb-10">
-        <p className="mb-10 font-light tracking-wide text-sm md:text-base text-zinc-500 text-center animate-fade-in">
+    <div className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black flex items-center">
+      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 h-full mb-10">
+        <p className="mb-10 font-light tracking-wide lg:text-lg text-zinc-500 text-center animate-fade-in">
           <b>Let's discuss</b> the next big idea. 💡
         </p>
         <motion.div
@@ -76,7 +74,7 @@ export default function Contact() {
                       className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-700 via-zinc-700/50 to-transparent"
                       aria-hidden="true"
                     />
-                    <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-500 group-hover:text-white group-hover:bg-zinc-900 border-zinc-700 bg-zinc-900 group-hover:border-zinc-500">
+                    <span className="relative z-10 flex-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-500 group-hover:text-white group-hover:bg-zinc-900 border-zinc-700 bg-zinc-900 group-hover:border-zinc-500">
                       {s.icon}
                     </span>
                     <div className="z-10 flex flex-col items-center">
@@ -101,7 +99,7 @@ export default function Contact() {
                       className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-700 via-zinc-700/50 to-transparent"
                       aria-hidden="true"
                     />
-                    <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-500 group-hover:text-white group-hover:bg-zinc-900 border-zinc-700 bg-zinc-900 group-hover:border-zinc-500">
+                    <span className="relative z-10 flex-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-500 group-hover:text-white group-hover:bg-zinc-900 border-zinc-700 bg-zinc-900 group-hover:border-zinc-500">
                       {s.icon}
                     </span>
                     <div className="z-10 flex flex-col items-center">

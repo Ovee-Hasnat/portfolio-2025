@@ -18,7 +18,7 @@ export default function CTA_Home() {
   return (
     <motion.div
       style={{ y }}
-      className="text-zinc-800 bg-zinc-950 max-w-screen-2xl rounded-3xl mx-auto px-6 py-12 md:py-24 md:px-16 cursor-default select-none flex flex-wrap gap-20 items-center justify-between section-reveal"
+      className="text-zinc-800 bg-zinc-950 max-w-screen-2xl rounded-3xl mx-auto px-6 py-12 md:py-20 md:px-16 cursor-default select-none flex flex-wrap gap-20 items-center justify-between section-reveal"
     >
       <div
         ref={ref}

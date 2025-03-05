@@ -13,7 +13,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="">
       <Hero />
       <div className="bg-gradient-to-l from-black to-zinc-600/20 space-y-16">
         <CTA_Home />

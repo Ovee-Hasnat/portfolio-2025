@@ -1,4 +1,3 @@
-import PrimaryNav from "@/components/navbar/primaryNav";
 import photo from "/images/profile/profile_1.webp";
 
 import { useScroll, motion, useTransform } from "motion/react";
@@ -16,7 +15,6 @@ export default function About() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
-      <PrimaryNav />
       <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 mt-32">
         <h2 className="text-7xl font-thin lowercase">
           Creative <br /> Developer

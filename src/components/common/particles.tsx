@@ -13,7 +13,7 @@ export default function Particles({
   className = "",
   quantity = 30,
   staticity = 50,
-  ease = 50,
+  ease = 40,
   refresh = false,
 }: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
