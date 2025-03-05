@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl xl:text-8xl bg-gradient-to-b from-zinc-900/60 via-zinc-900/40 to-black inline-block text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-6xl xl:text-8xl bg-gradient-to-b from-zinc-900/60 via-zinc-900/40 to-black inline-block text-transparent bg-clip-text font-display">
             &#xa9; {year}
           </h1>
         </div>

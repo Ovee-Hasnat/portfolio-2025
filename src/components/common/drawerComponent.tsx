@@ -37,7 +37,7 @@ export default function DrawerComponent() {
 
           <div className="my-16">
             <DrawerHeader>
-              <DrawerTitle className="font-light">Other socials</DrawerTitle>
+              <DrawerTitle className="font-light">Others</DrawerTitle>
             </DrawerHeader>
 
             <ul className="mt-6 lg:mt-8 flex gap-8 lg:gap-16 items-center justify-between">

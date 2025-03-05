@@ -1,12 +1,8 @@
 import GlitchedWriter, { presets } from "glitched-writer";
-import { useScroll, useTransform, motion } from "motion/react";
+import { motion } from "motion/react";
 import { useEffect } from "react";
 
 export default function Scrambles() {
-  const { scrollYProgress } = useScroll();
-
-  const y = useTransform(scrollYProgress, [0, 1], [0, 60]);
-
   useEffect(() => {
     const writer = new GlitchedWriter(".text", {
       ...presets.neo,
@@ -18,15 +14,28 @@ export default function Scrambles() {
       "fueling your digital success.",
       "reliable. skilled. let’s Build Together.",
       "'改善.' kaizen. continual improvement.",
+      "Let's build something amazing together.",
     ];
-    writer.queueWrite(phrases, 3500, true);
+    writer.queueWrite(phrases, 3000, true);
   }, []);
   return (
     <motion.div
-      style={{ y }}
-      className="mt-24 text-center animate-fade-in select-none"
+      initial={{
+        opacity: 0,
+        y: -20,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.3,
+          ease: "easeOut",
+          delay: 1.4,
+        },
+      }}
+      className="my-12 text-center select-none max-w-64 md:max-w-max mx-auto h-9"
     >
-      <p className="text text-sm md:text-base text-zinc-700 font-light font-mono"></p>
+      <p className="text text-xs md:text-base text-zinc-700 font-light font-mono"></p>
     </motion.div>
   );
 }

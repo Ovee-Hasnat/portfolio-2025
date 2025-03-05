@@ -9,7 +9,7 @@ const navigation = [
 export default function NavForHero() {
   return (
     <nav className="mb-20 animate-fade-in">
-      <ul className="flex items-center justify-center gap-5">
+      <ul className="flex-center gap-5">
         {navigation.map((item) => (
           <Link
             key={item.href}
