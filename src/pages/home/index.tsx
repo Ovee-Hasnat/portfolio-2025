@@ -1,9 +1,11 @@
+import CTAGlobal from "@/components/cta/cta_global";
 import CTA_Home from "@/components/cta/cta_home";
 import Experience from "@/components/experience/experience";
 import Expertise from "@/components/home/Expertise";
 import FeaturedProjects from "@/components/home/Featured";
 import Hero from "@/components/home/hero";
 import MeetDev from "@/components/home/MeetDev";
+
 import Skillset from "@/components/home/skillset";
 import { useEffect } from "react";
 
@@ -22,6 +24,7 @@ export default function Home() {
         <FeaturedProjects />
         <Experience />
         <Expertise />
+        <CTAGlobal />
       </div>
     </main>
   );

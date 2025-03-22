@@ -3,7 +3,7 @@ import ParallaxText from "../common/ParallaxText";
 
 export default function Expertise() {
   return (
-    <section className="pt-24 pb-44">
+    <section className="py-20 md:py-32">
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{
@@ -16,7 +16,7 @@ export default function Expertise() {
           },
         }}
         viewport={{ once: true }}
-        className="text-zinc-500 lowercase italic font-light text-center sm:text-xl animate-fade-in"
+        className="text-zinc-500 lowercase font-display text-center text-lg sm:text-xl animate-fade-in"
       >
         Driven by expertise in &#x2713;
       </motion.h2>

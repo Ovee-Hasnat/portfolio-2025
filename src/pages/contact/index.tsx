@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/common/card";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { useEffect } from "react";
 
 const socials = [
   {
@@ -29,6 +30,10 @@ const socials = [
 ];
 
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const handleCopyClick = async () => {
     try {
       await window.navigator.clipboard.writeText("hasnat.ovee@gmail.com");

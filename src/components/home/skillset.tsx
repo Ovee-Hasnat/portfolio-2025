@@ -25,7 +25,7 @@ const Skillset: React.FC = () => {
   } as React.CSSProperties;
 
   return (
-    <section className="pb-20 md:pb-44">
+    <section className="pb-20 md:pb-40">
       {/* <SectionTitle title={"Skills"} /> */}
       <div className="slider mt-10" style={sliderStyle}>
         <div className="list text-white/80 text-5xl lg:text-6xl">

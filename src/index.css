@@ -114,7 +114,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #111;
+  background: transparent;
 }
 
 /* Handle */
