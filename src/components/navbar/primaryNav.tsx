@@ -2,13 +2,20 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
+import {
+  AiOutlineCrown,
+  AiOutlineHome,
+  AiOutlineLaptop,
+  AiOutlinePhone,
+} from "react-icons/ai";
+
 import logo_gif from "/images/logo/short_logo.gif";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
+  { name: "home", href: "/", icon: <AiOutlineHome /> },
+  { name: "about", href: "/about", icon: <AiOutlineCrown /> },
+  { name: "projects", href: "/projects", icon: <AiOutlineLaptop /> },
+  { name: "contact", href: "/contact", icon: <AiOutlinePhone /> },
 ];
 
 export default function PrimaryNav() {
@@ -118,7 +125,7 @@ export default function PrimaryNav() {
                 delay: 0.7,
               },
             }}
-            className="flex-center gap-2 md:gap-5"
+            className="flex-center gap-5"
           >
             {navigation.map((item) => (
               <Link
@@ -130,7 +137,8 @@ export default function PrimaryNav() {
                     : "text-zinc-700 hover:text-zinc-500"
                 }`}
               >
-                {item.name}
+                <span className="hidden md:block">{item.name}</span>
+                <span className="text-2xl md:hidden">{item.icon}</span>
               </Link>
             ))}
           </motion.ul>

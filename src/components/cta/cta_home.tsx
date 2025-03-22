@@ -5,8 +5,6 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { Drawer, DrawerTrigger } from "@/components/ui/drawer";
-import DrawerComponent from "../common/drawerComponent";
 
 export default function CTA_Home() {
   const { scrollYProgress } = useScroll();
@@ -51,20 +49,21 @@ export default function CTA_Home() {
           transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s",
         }}
       >
-        <Drawer>
-          <h4 className="md:text-xl text-zinc-600 text-right font-light">
-            Ready to Grow?{" "}
-            <DrawerTrigger>
-              <span className="text-white/70 hover:text-white an-ease cursor-pointer underline decoration-zinc-700 font-display">
-                Let's connect
-              </span>{" "}
-              🙌
-            </DrawerTrigger>
-          </h4>
-
-          {/* DRAWER Component */}
-          <DrawerComponent />
-        </Drawer>
+        <h4 className="md:text-xl text-zinc-600 text-right font-light">
+          How can I help you?{" "}
+          <a
+            href="#showcase"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .querySelector("#showcase")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="text-white/70 hover:text-white an-ease cursor-pointer underline decoration-zinc-700 font-display"
+          >
+            See my works 🙌
+          </a>
+        </h4>
       </div>
     </motion.div>
   );

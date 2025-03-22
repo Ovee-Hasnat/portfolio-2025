@@ -7,7 +7,7 @@ export default function MeetDev() {
   const x = useTransform(scrollYProgress, [0, 0.5], [-600, 400]);
 
   return (
-    <section className="relative text-zinc-800 max-w-screen-2xl mx-auto pt-12 pb-20 lg:pt-52 lg:pb-44 px-6 flex gap-24 md:gap-40 md:items-end justify-between flex-col lg:flex-row-reverse">
+    <section className="relative text-zinc-800 max-w-screen-2xl mx-auto pt-12 pb-20 lg:pt-52 lg:pb-36 px-6 flex gap-24 md:gap-40 md:items-end justify-between flex-col lg:flex-row-reverse">
       <motion.div className="text-5xl md:text-8xl font-thin md:text-right relative z-10">
         <PiCodeLight className="md:ml-auto text-zinc-500" />
         <h2 className="mt-6">

@@ -1,0 +1,74 @@
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+}
+
+@media (max-width: 1024px) {
+  .marquee {
+    height: 500px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+}
+
+.marquee img {
+  /* filter: grayscale(100%); */
+  opacity: 0.4;
+  mix-blend-mode: multiply; /* Blend white areas with the background */
+  object-fit: cover;
+}
+
+.track-vertical {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-vertical 25s linear infinite;
+}
+
+.track-vertical-alt {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-vertical-alt 25s linear infinite;
+}
+
+.marquee-cover {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 10;
+  background-image: linear-gradient(180deg, #3a3a3a, hsla(0, 0%, 100%, 0) 25%);
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-vertical-alt {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

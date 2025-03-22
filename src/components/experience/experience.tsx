@@ -10,6 +10,8 @@ export default function Experience() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0.5, 1], [0, -100]);
 
+  console.log(y);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -18,7 +20,7 @@ export default function Experience() {
       // style={{ y }}
       className="bg-zinc-950 max-w-screen-2xl rounded-3xl mx-auto p-6 section-reveal"
     >
-      <SectionTitle title={"Experience"} />
+      <SectionTitle title={"Work"} />
 
       <div
         ref={ref}

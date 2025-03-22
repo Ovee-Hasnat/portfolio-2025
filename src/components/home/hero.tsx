@@ -7,7 +7,7 @@ import NumberCard from "../common/NumberCard";
 
 const cards = [
   { title: "Years of Experience", number: 2, plus: true },
-  { title: "Projects Delivered with Excellence", number: 20, plus: true },
+  { title: "Projects Delivered with Excellence", number: 15, plus: true },
   { title: "Possibilities for Your Business", number: "∞" },
   { title: "Goal – Turning Ideas into Reality", number: 1 },
 ];
@@ -18,6 +18,10 @@ export default function Hero() {
       <div className="flex-center flex-col h-screen container mx-auto">
         <Scrambles />
 
+        <p className="md:hidden my-12 select-none text-sm text-zinc-700 font-light text-center">
+          crafting seamless digital experiences <br /> since 2023.
+        </p>
+
         <Particles
           className="absolute inset-0 -z-10 animate-fade-in"
           quantity={100}
@@ -25,23 +29,24 @@ export default function Hero() {
 
         <HeroText />
 
-        <div className="my-4 text-center animate-fade-in">
+        <div className="md:mb-4 text-center animate-fade-in">
           <h2 className="text-sm md:text-base text-zinc-700 lowercase italic">
             &#x5b; `Software Engineer`, `Photographer`, `Learner` &#x5d;
             {/* &#x7c; */}
           </h2>
         </div>
 
-        <div className="mt-28 max-w-80 md:max-w-screen-md px-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-20 md:mt-32 max-w-[95%] md:max-w-screen-md px-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 80 }} // Drops further for more impact
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.6,
-                ease: "easeOut",
-                delay: index === 0 ? 2 : 2 + index * 0.2, // Adds a delay for each card
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+                delay: index === 0 ? 2 : 2 + index * 0.25, // Staggered effect
               }}
             >
               <NumberCard {...card} />
