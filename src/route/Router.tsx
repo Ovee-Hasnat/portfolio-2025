@@ -31,6 +31,14 @@ export const router = createBrowserRouter([
     ),
   },
   {
+    path: "/case-study/:slug",
+    element: (
+      <Layout>
+        <Contact />
+      </Layout>
+    ),
+  },
+  {
     path: "*",
     element: (
       <Layout>

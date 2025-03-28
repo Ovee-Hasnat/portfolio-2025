@@ -1,42 +1,46 @@
 import { useScroll, useTransform, motion } from "motion/react";
 import SectionTitle from "../common/sectionTitle";
+import FeaturedProjectCard from "../common/FeaturedProjectCard";
+
+import { featuredProjects } from "@/constants/featured";
+import { useRef } from "react";
 
 export default function FeaturedProjects() {
-  const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0.3, 1], [100, -1000]);
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref, // Tracks this specific section
+    offset: ["start end", "end start"], // Triggers animation when the section is in view
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], [0, -1000]);
 
   return (
-    <section className="pb-32 md:pb-52 relative overflow-hidden" id="showcase">
+    <section
+      className="pb-32 md:pb-52 relative overflow-hidden"
+      id="showcase"
+      ref={ref}
+    >
       <div className="max-w-screen-2xl mx-auto px-6 relative">
         <SectionTitle title="Showcase" />
 
-        {/* <div className="md:mt-36 grid md:grid-cols-2 gap-6">
-          <FeaturedProjectCard />
-          <FeaturedProjectCard />
-          <FeaturedProjectCard />
-          <FeaturedProjectCard />
-        </div> */}
+        <div className="mt-20 md:mt-40 space-y-24">
+          {featuredProjects.map((project, index) => (
+            <FeaturedProjectCard
+              key={index}
+              project={project}
+              reverse={index % 2 !== 0 ? true : false}
+            />
+          ))}
+        </div>
       </div>
-
-      {/* Grid Layout */}
-      {/* <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <div
-            key={i}
-            className="bg-zinc-800/50 p-8 rounded-xl min-w-[320px] flex items-center justify-center shadow-md"
-          >
-            <p className="text-white">Item {i + 1}</p>
-          </div>
-        ))}
-      </div> */}
 
       <motion.h1
         style={{
           x,
         }}
-        className="hidden lg:block text-[120px] font-display tracking-tight text-zinc-900/40 absolute right-0 z-10 top-40"
+        className="hidden lg:block text-[120px] font-display tracking-tight text-zinc-900/50 absolute right-0 z-10 top-40"
       >
-        Featured
+        featured
       </motion.h1>
     </section>
   );

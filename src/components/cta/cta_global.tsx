@@ -35,7 +35,7 @@ export default function CTAGlobal() {
         </div>
       </div>
 
-      <div className="px-4 pt-20 lg:py-44 text-center absolute-center z-10 bg-black/75 w-full h-full">
+      <div className="px-4 pt-20 lg:py-44 text-center absolute-center z-10 bg-black/80 w-full h-full">
         <h2 className="text-4xl md:text-6xl text-zinc-500 font-display max-w-screen-lg mx-auto">
           Ready to take your digital presence to the{" "}
           <span className="text-zinc-200">next level?</span>
@@ -46,7 +46,7 @@ export default function CTAGlobal() {
         </h5>
 
         <Link to={"/contact"}>
-          <button className="mt-10 md:mt-20 text-zinc-200 text-lg py-2 px-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:tracking-wider hover:text-white an-ease font-medium">
+          <button className="mt-10 md:mt-20 text-zinc-200 text-lg py-2 px-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:tracking-wider hover:text-white an-ease font-medium shadow-md">
             Get in touch 🚀
           </button>
         </Link>
