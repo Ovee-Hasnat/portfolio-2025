@@ -1,6 +1,10 @@
 import "./cts_styles.css";
 import { Link } from "react-router-dom";
-import bg_1 from "/images/bg/sjis.png";
+import sjis from "/images/bg/sjis.png";
+import alljobs from "/images/bg/alljobs_fullpage.png";
+import decor from "/images/bg/decor_fullpage.png";
+import lwscart from "/images/bg/lwscart_fullpage.png";
+import bracnet from "/images/bg/bracnet_fullpage.png";
 
 export default function CTAGlobal() {
   return (
@@ -9,8 +13,8 @@ export default function CTAGlobal() {
         <div className="marquee-cover"></div>
         <div className="track-vertical-alt">
           <div className="space-y-4">
-            <img src={bg_1} alt="SJIS" />
-            <img src={bg_1} alt="SJIS" />
+            <img src={decor} alt="SJIS" loading="lazy" />
+            <img src={alljobs} alt="SJIS" loading="lazy" />
           </div>
         </div>
       </div>
@@ -19,8 +23,8 @@ export default function CTAGlobal() {
         <div className="marquee-cover"></div>
         <div className="track-vertical">
           <div className="space-y-4">
-            <img src={bg_1} alt="SJIS" />
-            <img src={bg_1} alt="SJIS" />
+            <img src={bracnet} alt="SJIS" loading="lazy" />
+            <img src={lwscart} alt="SJIS" loading="lazy" />
           </div>
         </div>
       </div>
@@ -29,8 +33,8 @@ export default function CTAGlobal() {
         <div className="marquee-cover"></div>
         <div className="track-vertical-alt">
           <div className="space-y-4">
-            <img src={bg_1} alt="SJIS" />
-            <img src={bg_1} alt="SJIS" />
+            <img src={sjis} alt="SJIS" loading="lazy" />
+            <img src={decor} alt="SJIS" loading="lazy" />
           </div>
         </div>
       </div>

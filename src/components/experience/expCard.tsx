@@ -23,6 +23,8 @@ export default function ExpCard({ data }: ExpCardProps) {
         {/* Logo */}
         <a href={data?.website} target="_blank">
           <img
+            loading="lazy"
+            width={80}
             src={data?.logo}
             alt="SSL"
             className="h-7 md:h-8 filter grayscale opacity-20 group-hover:opacity-40 object-contain duration-300 ease-in-out"

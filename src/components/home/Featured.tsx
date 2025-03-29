@@ -16,14 +16,14 @@ export default function FeaturedProjects() {
 
   return (
     <section
-      className="pb-32 md:pb-52 relative overflow-hidden"
+      className="pb-24 md:pb-48 relative overflow-hidden"
       id="showcase"
       ref={ref}
     >
       <div className="max-w-screen-2xl mx-auto px-6 relative">
         <SectionTitle title="Showcase" />
 
-        <div className="mt-20 md:mt-40 space-y-24">
+        <div className="mt-20 md:mt-40 space-y-16 lg:space-y-24">
           {featuredProjects.map((project, index) => (
             <FeaturedProjectCard
               key={index}
