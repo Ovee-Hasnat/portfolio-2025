@@ -19,7 +19,9 @@
 
 .marquee img {
   /* filter: grayscale(100%); */
-  opacity: 0.4;
+  opacity: 0.5;
+  width: 100%;
+  filter: blur(1px);
   mix-blend-mode: multiply; /* Blend white areas with the background */
   object-fit: cover;
 }

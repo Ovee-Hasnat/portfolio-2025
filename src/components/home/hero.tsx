@@ -4,6 +4,7 @@ import Particles from "../common/particles";
 import HeroText from "./heroText";
 import Scrambles from "../common/scrambles";
 import NumberCard from "../common/NumberCard";
+import ScrollDown from "../common/scroll_down";
 
 const cards = [
   { title: "Years of Experience", number: 2, plus: true },
@@ -53,6 +54,8 @@ export default function Hero() {
             </motion.div>
           ))}
         </div>
+
+        <ScrollDown />
       </div>
     </section>
   );

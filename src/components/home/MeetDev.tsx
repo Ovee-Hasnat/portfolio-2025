@@ -1,13 +1,21 @@
 import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 import { PiCodeLight } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
 export default function MeetDev() {
-  const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 0.5], [-600, 400]);
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref, // Tracks this specific section
+    offset: ["start end", "end start"], // Triggers animation when the section is in view
+  });
+  const x = useTransform(scrollYProgress, [0, 1], [-400, 300]);
 
   return (
-    <section className="relative text-zinc-800 max-w-screen-2xl mx-auto pt-12 pb-20 lg:pt-52 lg:pb-36 px-6 flex gap-24 md:gap-40 md:items-end justify-between flex-col lg:flex-row-reverse">
+    <section
+      ref={ref}
+      className="relative text-zinc-800 max-w-screen-2xl mx-auto pt-12 pb-20 lg:pt-52 lg:pb-36 px-6 flex gap-24 md:gap-40 md:items-end justify-between flex-col lg:flex-row-reverse"
+    >
       <motion.div className="text-5xl md:text-8xl font-thin md:text-right relative z-10">
         <PiCodeLight className="md:ml-auto text-zinc-500" />
         <h2 className="mt-6">
@@ -50,7 +58,7 @@ export default function MeetDev() {
         }}
         className="hidden lg:block text-[120px] font-display tracking-tighter text-black absolute left-0 z-0 top-32"
       >
-        About
+        about
       </motion.h1>
     </section>
   );

@@ -1,3 +1,4 @@
+import CTAGlobal from "@/components/cta/cta_global";
 import photo from "/images/profile/profile_1.webp";
 
 import { useScroll, motion, useTransform } from "motion/react";
@@ -14,8 +15,8 @@ export default function About() {
   console.log(y);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
-      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 mt-32">
+    <section className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 my-32">
         <h2 className="text-7xl font-thin lowercase">
           Creative <br /> Developer
         </h2>
@@ -26,13 +27,16 @@ export default function About() {
           className="max-w-[370px] mt-4"
         >
           <img
+            loading="lazy"
             src={photo}
             alt="profile photo of Ovee"
             className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-500 opacity-70"
           />
         </motion.div>
       </div>
-    </div>
+
+      <CTAGlobal />
+    </section>
   );
 }
 

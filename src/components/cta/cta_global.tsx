@@ -1,6 +1,10 @@
 import "./cts_styles.css";
 import { Link } from "react-router-dom";
-import bg_1 from "/images/bg/sjis.png";
+import sjis from "/images/bg/sjis.png";
+import alljobs from "/images/bg/alljobs_fullpage.png";
+import decor from "/images/bg/decor_fullpage.png";
+import lwscart from "/images/bg/lwscart_fullpage.png";
+import bracnet from "/images/bg/bracnet_fullpage.png";
 
 export default function CTAGlobal() {
   return (
@@ -9,8 +13,8 @@ export default function CTAGlobal() {
         <div className="marquee-cover"></div>
         <div className="track-vertical-alt">
           <div className="space-y-4">
-            <img src={bg_1} alt="SJIS" />
-            <img src={bg_1} alt="SJIS" />
+            <img src={decor} alt="SJIS" loading="lazy" />
+            <img src={alljobs} alt="SJIS" loading="lazy" />
           </div>
         </div>
       </div>
@@ -19,8 +23,8 @@ export default function CTAGlobal() {
         <div className="marquee-cover"></div>
         <div className="track-vertical">
           <div className="space-y-4">
-            <img src={bg_1} alt="SJIS" />
-            <img src={bg_1} alt="SJIS" />
+            <img src={bracnet} alt="SJIS" loading="lazy" />
+            <img src={lwscart} alt="SJIS" loading="lazy" />
           </div>
         </div>
       </div>
@@ -29,13 +33,13 @@ export default function CTAGlobal() {
         <div className="marquee-cover"></div>
         <div className="track-vertical-alt">
           <div className="space-y-4">
-            <img src={bg_1} alt="SJIS" />
-            <img src={bg_1} alt="SJIS" />
+            <img src={sjis} alt="SJIS" loading="lazy" />
+            <img src={decor} alt="SJIS" loading="lazy" />
           </div>
         </div>
       </div>
 
-      <div className="px-4 pt-20 lg:py-44 text-center absolute-center z-10 bg-black/75 w-full h-full">
+      <div className="px-4 pt-20 lg:py-44 text-center absolute-center z-10 bg-black/80 w-full h-full">
         <h2 className="text-4xl md:text-6xl text-zinc-500 font-display max-w-screen-lg mx-auto">
           Ready to take your digital presence to the{" "}
           <span className="text-zinc-200">next level?</span>
@@ -46,7 +50,7 @@ export default function CTAGlobal() {
         </h5>
 
         <Link to={"/contact"}>
-          <button className="mt-10 md:mt-20 text-zinc-200 text-lg py-2 px-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:tracking-wider hover:text-white an-ease font-medium">
+          <button className="mt-10 md:mt-20 text-zinc-200 text-lg py-2 px-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:tracking-wider hover:text-white an-ease font-medium shadow-md">
             Get in touch 🚀
           </button>
         </Link>
