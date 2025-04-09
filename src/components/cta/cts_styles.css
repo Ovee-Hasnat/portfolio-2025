@@ -21,7 +21,7 @@
   /* filter: grayscale(100%); */
   opacity: 0.5;
   width: 100%;
-  filter: blur(1px);
+  filter: blur(1px) grayscale(100%);
   mix-blend-mode: multiply; /* Blend white areas with the background */
   object-fit: cover;
 }

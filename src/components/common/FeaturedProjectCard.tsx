@@ -38,8 +38,8 @@ export default function FeaturedProjectCard({
       <div className="rounded-lg overflow-hidden lg:col-span-3">
         <motion.img
           style={{ scale }}
-          initial={{ opacity: 0.8 }}
-          whileHover={{ opacity: 1 }}
+          // initial={{ opacity: 1 }}
+          // whileHover={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           src={`/images/projects/${project?.image}`}
           alt={project?.title}

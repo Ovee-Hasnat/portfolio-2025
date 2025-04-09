@@ -1,10 +1,9 @@
-import CTAGlobal from "@/components/cta/cta_global";
 import photo from "/images/profile/profile_1.webp";
 
 import { useScroll, motion, useTransform } from "motion/react";
 import { useEffect } from "react";
 
-export default function About() {
+function About() {
   const { scrollYProgress } = useScroll();
 
   useEffect(() => {
@@ -35,10 +34,12 @@ export default function About() {
         </motion.div>
       </div>
 
-      <CTAGlobal />
+      {/* <CTAGlobal /> */}
     </section>
   );
 }
+
+export default About;
 
 // Creative & Strategy services for
 // entrepreneurs, startups, & small businesses

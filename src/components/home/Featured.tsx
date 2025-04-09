@@ -12,7 +12,7 @@ export default function FeaturedProjects() {
     offset: ["start end", "end start"], // Triggers animation when the section is in view
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], [0, -1000]);
+  const x = useTransform(scrollYProgress, [0, 1], [0, -1600]);
 
   return (
     <section

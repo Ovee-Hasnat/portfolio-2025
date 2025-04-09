@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
     path: "/case-study/:slug",
     element: (
       <Layout>
-        <Contact />
+        <NotFound />
       </Layout>
     ),
   },
