@@ -16,6 +16,14 @@ export const featuredProjects = [
     tech: "javascript, react.js, tailwind css, axios, chart.js, keep react ui",
   },
   {
+    title: "Accounting Software for JSTU",
+    description:
+      "A powerful accounting software streamlining financial management and seamless reporting for a leading public university in Bangladesh.",
+    image: "jstu_home_01.png",
+    slug: "jstu",
+    tech: "php, laravel, javascript, bootstrap 5, jquery, yajra js",
+  },
+  {
     title: "Bigfish- Telegram Game",
     description:
       "Bigfish is a tap-to-earn crypto game on Telegram where you simulate running a crypto exchange.",

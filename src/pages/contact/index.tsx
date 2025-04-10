@@ -69,7 +69,7 @@ export default function Contact() {
           {socials.map((s) => {
             if (!s.tap)
               return (
-                <Card>
+                <Card key={s.href}>
                   <a
                     href={s.href}
                     target="_blank"
