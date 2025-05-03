@@ -18,7 +18,7 @@ export const experience = [
       },
       {
         project: "Vision Limo",
-        link: "https://visionlimogroup.com/",
+        link: "https://iqlimo.com/",
       },
       {
         project: "Bracnet Connect",
@@ -40,7 +40,7 @@ export const experience = [
     website: "https://techsolutionfactory.com/",
     contributions: [
       {
-        project: "Shipper's Council Bangladesh",
+        project: "Shippers' Council Bangladesh",
         link: "https://scbdhk.org.bd/",
       },
       {

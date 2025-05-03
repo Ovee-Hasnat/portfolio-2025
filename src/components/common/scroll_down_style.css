@@ -14,8 +14,8 @@
   display: block;
   width: 14px;
   height: 14px;
-  border-bottom: 1px solid #666;
-  border-right: 1px solid #666;
+  border-bottom: 1px solid #2c2c2c;
+  border-right: 1px solid #2c2c2c;
   transform: rotate(45deg);
   margin: -12px;
   animation: animate 2s infinite;

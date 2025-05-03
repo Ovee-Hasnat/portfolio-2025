@@ -128,18 +128,19 @@ export default function PrimaryNav() {
             className="flex-center gap-5"
           >
             {navigation.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className={`text-sm md:text-base duration-500 ${
-                  location.pathname === item.href
-                    ? "text-zinc-500"
-                    : "text-zinc-700 hover:text-zinc-500"
-                }`}
-              >
-                <span className="hidden md:block">{item.name}</span>
-                <span className="text-2xl md:hidden">{item.icon}</span>
-              </Link>
+              <li key={item.href}>
+                <Link
+                  to={item.href}
+                  className={`text-sm md:text-base duration-500 ${
+                    location.pathname === item.href
+                      ? "text-zinc-500"
+                      : "text-zinc-700 hover:text-zinc-500"
+                  }`}
+                >
+                  <span className="hidden md:block">{item.name}</span>
+                  <span className="text-2xl md:hidden">{item.icon}</span>
+                </Link>
+              </li>
             ))}
           </motion.ul>
         </>

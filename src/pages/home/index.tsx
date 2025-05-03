@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="">
+    <>
       <Hero />
       <div className="bg-gradient-to-l from-black to-zinc-600/20 space-y-16">
         <CTA_Home />
@@ -26,6 +26,6 @@ export default function Home() {
         <Expertise />
         <CTAGlobal />
       </div>
-    </main>
+    </>
   );
 }

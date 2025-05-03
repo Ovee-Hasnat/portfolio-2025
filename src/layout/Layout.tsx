@@ -3,7 +3,7 @@ import PrimaryNav from "@/components/navbar/primaryNav";
 import { AnimatePresence, motion } from "motion/react";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => (
-  <>
+  <main>
     <PrimaryNav />
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
@@ -17,5 +17,5 @@ export const Layout = ({ children }: { children: React.ReactNode }) => (
       </motion.div>
     </AnimatePresence>
     <Footer />
-  </>
+  </main>
 );

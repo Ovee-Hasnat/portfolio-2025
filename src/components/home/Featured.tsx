@@ -4,6 +4,8 @@ import FeaturedProjectCard from "../common/FeaturedProjectCard";
 
 import { featuredProjects } from "@/constants/featured";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { Card } from "../common/card";
 
 export default function FeaturedProjects() {
   const ref = useRef(null);
@@ -20,7 +22,7 @@ export default function FeaturedProjects() {
       id="showcase"
       ref={ref}
     >
-      <div className="max-w-screen-2xl mx-auto px-6 relative">
+      <div className="max-w-screen-2xl mx-auto px-4 relative">
         <SectionTitle title="Showcase" />
 
         <div className="mt-20 md:mt-40 space-y-16 lg:space-y-24">
@@ -31,6 +33,17 @@ export default function FeaturedProjects() {
               reverse={index % 2 !== 0 ? true : false}
             />
           ))}
+        </div>
+
+        <div className="pt-10 block group">
+          <Card>
+            <Link
+              className="font-display an-ease text-white/50 group-hover:text-white text-lg text-center py-6 block w-full"
+              to="/projects"
+            >
+              See all projects 🛠️
+            </Link>
+          </Card>
         </div>
       </div>
 

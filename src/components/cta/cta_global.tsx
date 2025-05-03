@@ -8,7 +8,7 @@ import bracnet from "/images/bg/bracnet_fullpage.png";
 
 export default function CTAGlobal() {
   return (
-    <section className="max-w-screen-2xl mx-auto section-reveal grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 relative overflow-hidden">
+    <section className="max-w-screen-2xl mx-auto section-reveal grid grid-cols-2 md:grid-cols-3 gap-2 relative overflow-hidden py-2 px-2">
       <div className="marquee">
         <div className="marquee-cover"></div>
         <div className="track-vertical-alt">
@@ -40,17 +40,17 @@ export default function CTAGlobal() {
       </div>
 
       <div className="px-4 pt-20 lg:py-44 text-center absolute-center z-10 bg-black/80 w-full h-full">
-        <h2 className="text-4xl md:text-6xl text-zinc-500 font-display max-w-screen-lg mx-auto">
-          Ready to take your digital presence to the{" "}
+        <h2 className="text-3xl md:text-5xl text-zinc-500 font-display max-w-screen-lg mx-auto">
+          Ready to take your digital presence to the <br />
           <span className="text-zinc-200">next level?</span>
         </h2>
-        <h5 className="mt-4 text-xl text-zinc-500">
+        <h5 className="mt-4 text-lg md:text-xl text-zinc-500">
           Reach out today and let's discuss how I can help you achieve your
           goals.
         </h5>
 
         <Link to={"/contact"}>
-          <button className="mt-10 md:mt-20 text-zinc-200 text-lg py-2 px-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:tracking-wider hover:text-white an-ease font-medium shadow-md">
+          <button className="mt-10 md:mt-16 text-zinc-200 md:text-lg py-2 px-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:tracking-wider hover:text-white an-ease font-medium shadow-md">
             Get in touch 🚀
           </button>
         </Link>
