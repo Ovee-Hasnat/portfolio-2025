@@ -146,7 +146,7 @@ export default {
         },
       },
       screens: {
-        "2xl": "1366px",
+        "2xl": "1333px",
       },
     },
   },

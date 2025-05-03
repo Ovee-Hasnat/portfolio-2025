@@ -25,21 +25,19 @@ export default function FeaturedProjectCard({
     offset: ["start end", "end start"], // Triggers animation when the section is in view
   });
 
-  const y = useTransform(scrollYProgress, [0.3, 1], [0, -160]);
+  const y = useTransform(scrollYProgress, [0.3, 1], [0, -120]);
   const yMobile = useTransform(scrollYProgress, [0.3, 1], [0, -50]);
   const scale = useTransform(scrollYProgress, [0.3, 0.7], [1, 1.1]);
 
   return (
     <div
       ref={ref}
-      className="lg:h-[50dvh] grid lg:grid-cols-5 gap-4 lg:gap-10"
+      className="md:h-[60dvh] grid lg:grid-cols-5 gap-4 lg:gap-10"
       dir={reverse ? "rtl" : ""}
     >
       <div className="rounded-lg overflow-hidden lg:col-span-3">
         <motion.img
           style={{ scale }}
-          // initial={{ opacity: 1 }}
-          // whileHover={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           src={`/images/projects/${project?.image}`}
           alt={project?.title}
