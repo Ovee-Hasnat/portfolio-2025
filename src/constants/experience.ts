@@ -26,7 +26,7 @@ export const experience = [
       },
       {
         project: "Accounting Software for JSTU",
-        link: null,
+        link: "https://bsfmstu.solutionspin.com/",
       },
     ],
   },

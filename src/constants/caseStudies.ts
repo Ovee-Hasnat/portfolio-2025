@@ -1,28 +1,44 @@
 export const caseStudies = [
   {
-    title: "Alljobs by Teletalk",
-    description:
-      "A leading job portal for Bangladeshi businesses to connect with job seekers and recruiters.",
-    coverImage: "alljobs_home.png",
-    slug: "alljobs",
-    type: "Web App",
-    tech: "javascript, typescript, react.js, redux, tailwind css, firebase, axios, chart.js, headless ui",
-    workScope: "Frontend",
-    problems: [
-      "Notification, User Profiler, Multiple CV Options, Admin Panel- job posting, ",
-    ],
-  },
-  {
     title: "Smart Jute Information Software",
     description:
       "Smart Jute Information Software streamlines jute data management, trade tracking, and reporting for the Ministry of Textiles & Jute, Government of Bangladesh.",
     coverImage: "sjis_home_01.png",
     slug: "sjis",
-    type: "Web App",
+    type: "Web Application",
     tech: "javascript, react.js, tailwind css, axios, chart.js, keep react ui",
     workScope: "Frontend",
+    url: "https://sjis.dgjute.gov.bd/",
     problems: [
       "Authentication, Role based authorization, Dashboard with real-time data visualization, Employee Management, User Profile, Master Data Management, Data entry forms, Data approval layers, various Report generation, searching and sorting, report on dynamic criterias, Report export to PDF and CSV fromat, Admin Panel ",
+    ],
+  },
+  {
+    title: "Alljobs by Teletalk",
+    description:
+      "A leading job portal for Bangladeshi businesses to connect with job seekers and recruiters.",
+    coverImage: "alljobs_home.png",
+    slug: "alljobs",
+    type: "Web Application",
+    tech: "javascript, typescript, react.js, redux, tailwind css, firebase, axios, chart.js, headless ui",
+    workScope: "Frontend",
+    url: "https://alljobs.teletalk.com.bd/",
+    problems: [
+      "Notification, User Profiler, Multiple CV Options, Admin Panel- job posting, ",
+    ],
+  },
+  {
+    title: "Accounting Software for JSTU",
+    description:
+      "A powerful accounting software streamlining financial management and seamless reporting for a leading public university in Bangladesh.",
+    coverImage: "jstu_home_01.png",
+    slug: "jstu",
+    type: "Web Application",
+    tech: "php, laravel, javascript, mySQL, eloquent, bootstrap 5, jquery, yajra datatable",
+    workScope: "Frontend & Backend",
+    url: "https://bsfmstu.solutionspin.com/",
+    problems: [
+      "Responsive design, Reactive, State Management, Authorization, Real-time data visual, Daily game logic implementation",
     ],
   },
   {
@@ -34,6 +50,7 @@ export const caseStudies = [
     type: "Website",
     tech: "javascript, react.js, next.js, node.js, express.js, mySQL, prisma, tailwind css, axios",
     workScope: "Frontend & Backend",
+    url: "https://scbdhk.org.bd/",
     problems: [
       "Landing page, Company portfolio, Services & other pages, Contact Form & Newsletter subscription, Important documents archive, Image & video gallery",
     ],
@@ -47,8 +64,11 @@ export const caseStudies = [
     type: "Webview Telegram App",
     tech: "javascript, typescript, react.js, zustand, tailwind css, axios, shadcn ui",
     workScope: "Frontend",
+    url: null,
     problems: [
       "Responsive design, Reactive, State Management, Authorization, Real-time data visual, Daily game logic implementation",
     ],
   },
 ];
+
+// url: "https://bsfmstu.solutionspin.com/", JSTU

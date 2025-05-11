@@ -2,6 +2,8 @@ import { caseStudies } from "@/constants/caseStudies";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import NotFound from "../notFound";
+import { FaLink } from "react-icons/fa";
+import { Card } from "@/components/common/card";
 
 export default function CaseStudy() {
   const { slug } = useParams();
@@ -19,10 +21,10 @@ export default function CaseStudy() {
   }
 
   return (
-    <section className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+    <section className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <div className="max-w-screen-2xl mx-auto text-zinc-700 my-32">
         <div
-          className="h-[50dvh] lg:h-[65dvh] w-full bg-fixed bg-center lg:bg-contain bg-no-repeat"
+          className="h-[50dvh] lg:h-[65dvh] w-full lg:bg-contain bg-center bg-fixed bg-no-repeat"
           style={{
             backgroundImage: `url(/images/projects/${currentStudy?.coverImage})`,
           }}
@@ -36,7 +38,22 @@ export default function CaseStudy() {
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-10 my-8 lg:my-16 text-xl">
-            <p>{currentStudy?.description}</p>
+            <div className="space-y-4">
+              <p>{currentStudy?.description}</p>
+              {currentStudy?.url && (
+                <a
+                  href={currentStudy?.url}
+                  target="_blank"
+                  className="block w-fit font-display text-base"
+                >
+                  <Card>
+                    <span className="py-1.5 px-8 flex-center gap-2">
+                      <FaLink size={14} /> <span>Live link</span>
+                    </span>
+                  </Card>
+                </a>
+              )}
+            </div>
 
             <div className="space-y-4 text-end">
               <p>
@@ -56,6 +73,8 @@ export default function CaseStudy() {
               </ul>
             </div>
           </div>
+
+          {/* Problems and solves */}
         </div>
 
         <div className="text-end lg:w-1/4 lg:ml-auto px-4">

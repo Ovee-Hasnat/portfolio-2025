@@ -5,7 +5,7 @@ import { Toaster } from "./components/ui/toaster";
 
 function App() {
   return (
-    <ReactLenis root options={{ duration: 1.5, wheelMultiplier: 1.5 }}>
+    <ReactLenis root options={{ wheelMultiplier: 1.2 }}>
       <RouterProvider router={router} />
       <Toaster />
     </ReactLenis>

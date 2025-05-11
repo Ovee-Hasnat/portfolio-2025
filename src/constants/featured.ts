@@ -31,12 +31,12 @@ export const featuredProjects = [
     slug: "bigfish",
     tech: "javascript, typescript, react.js, zustand, tailwind css, axios, shadcn ui",
   },
-  {
-    title: "Selftest",
-    description:
-      "Self-assessment test platform for businesses to improve employee engagement and retention.",
-    image: "selftest_home_01.png",
-    slug: "selftest",
-    tech: "javascript, typescript, react.js, recoil, tailwind css, axios, chart.js, formik",
-  },
+  // {
+  //   title: "Selftest",
+  //   description:
+  //     "Self-assessment test platform for businesses to improve employee engagement and retention.",
+  //   image: "selftest_home_01.png",
+  //   slug: "selftest",
+  //   tech: "javascript, typescript, react.js, recoil, tailwind css, axios, chart.js, formik",
+  // },
 ];
