@@ -37,7 +37,7 @@ export default function Hero() {
           </h2>
         </div>
 
-        <div className="mt-20 md:mt-32 max-w-[95%] md:max-w-screen-md px-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-24 md:mt-32 max-w-[95%] md:max-w-screen-md px-6 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {cards.map((card, index) => (
             <motion.div
               key={index}

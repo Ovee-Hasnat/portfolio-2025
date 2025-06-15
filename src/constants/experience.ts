@@ -18,7 +18,8 @@ export const experience = [
       },
       {
         project: "Vision Limo",
-        link: "https://iqlimo.com/",
+        // link: "https://iqlimo.com/",
+        link: "https://visionlimogroup.com/",
       },
       {
         project: "Bracnet Connect",

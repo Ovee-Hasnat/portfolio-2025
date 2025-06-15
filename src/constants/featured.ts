@@ -2,7 +2,7 @@ export const featuredProjects = [
   {
     title: "Alljobs by Teletalk",
     description:
-      "A leading job portal for Bangladeshi businesses to connect with job seekers and recruiters.",
+      "A leading job portal for Bangladeshi public service sector and private businesses to connect with job seekers and recruiters.",
     image: "alljobs_home.png",
     slug: "alljobs",
     tech: "javascript, typescript, react.js, redux, tailwind css, firebase, axios, chart.js, headless ui",

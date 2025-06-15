@@ -64,7 +64,7 @@ export default function MeetDev() {
         style={{
           x,
         }}
-        className="hidden lg:block text-[120px] font-display tracking-tighter text-black absolute left-0 z-0 top-32"
+        className="hidden lg:block text-[120px] font-display tracking-tighter text-black absolute left-0 z-0 top-28"
       >
         about
       </motion.h1>

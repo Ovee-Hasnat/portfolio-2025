@@ -13,7 +13,7 @@ export default function Projects() {
       <div className="max-w-screen-2xl mx-auto text-zinc-700 my-32 px-4 2xl:px-0">
         <h2 className="text-7xl font-thin lowercase">Projects</h2>
 
-        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-5">
           {caseStudies.map((project) => (
             <Card key={project.slug}>
               <ProjectCard project={project} />
