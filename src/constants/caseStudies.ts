@@ -96,34 +96,40 @@ export const caseStudies = [
     url: null,
     problems: [
       {
-        problem: "Persistent Game State with Zustand",
+        problem: "Mobile-Optimized Design",
         solution:
-          "We implemented a lightweight and efficient global state management system using Zustand. This ensures the player's game data—like balance, upgrades, and cooldowns—remains consistent throughout the session and across interactions. It provides a smooth and continuous gaming experience that keeps users engaged without interruptions.",
-        image: "persistent_state.png",
+          "Crafted a responsive, touch-friendly layout using Tailwind CSS to ensure smooth gameplay across all devices inside Telegram's webview.",
+        image: "bigfish_responsive_ui.png",
       },
       {
-        problem: "Responsive UI Inside Telegram Webview",
+        problem: "Smooth, Interactive Experience",
         solution:
-          "Tailored the entire game interface to be fully responsive within Telegram's constrained webview environment. Leveraged Tailwind CSS with mobile-first design principles to ensure seamless usability across Android and iOS devices—critical for keeping casual players hooked from their first tap.",
-        image: "responsive_design.png",
+          "Built with React to deliver instant UI updates and fluid interactions, making every tap feel responsive and engaging.",
+        image: "bigfish_interactive_ui.png",
       },
       {
-        problem: "Real-Time Feedback & Optimistic UI",
+        problem: "Reliable Game State Handling",
         solution:
-          "Integrated Axios with optimistic UI patterns to provide instant feedback on actions like tapping, upgrading, and collecting earnings. This reduced perceived latency and created a snappy, game-like feel—boosting player satisfaction and retention.",
-        image: "optimistic_ui.png",
+          "Used Zustand for global state management, keeping track of user progress, balances, and upgrades in real-time without performance lag.",
+        image: "bigfish_state_management.png",
       },
       {
-        problem: "Animated Metrics & Visual Cues",
+        problem: "One-Click Telegram Login",
         solution:
-          "Developed animated stat components using React and Shadcn UI to visualize key metrics like exchange balance growth, upgrade progress, and cooldowns. These visuals enhance user understanding and add energy to the gameplay, making complex actions feel intuitive and rewarding.",
-        image: "animated_metrics.png",
+          "Seamlessly integrated Telegram WebApp SDK for secure, frictionless login—no forms, no passwords, just instant access.",
+        image: "bigfish_telegram_auth.png",
       },
       {
-        problem: "Seamless Telegram Login Integration",
+        problem: "Live Stats & Feedback",
         solution:
-          "Used Telegram WebApp SDK for secure authentication, ensuring one-click login and identity verification. By storing session data efficiently, returning users can resume gameplay without friction—boosting re-engagement and reducing drop-offs.",
-        image: "telegram_auth.png",
+          "Displayed real-time balance updates, timers, and progress visuals with animated components for an engaging game flow.",
+        image: "bigfish_interactive_ui.png",
+      },
+      {
+        problem: "Daily Gameplay Mechanics",
+        solution:
+          "Implemented logic for daily resets, earnings, and cooldowns to keep users returning and boost long-term engagement.",
+        image: "bigfish_state_management.png",
       },
 
       // "Responsive design, Reactive, State Management, Authorization, Real-time data visual, Daily game logic implementation",

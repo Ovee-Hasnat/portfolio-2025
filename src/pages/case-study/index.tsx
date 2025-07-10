@@ -118,7 +118,7 @@ export default function CaseStudy() {
                 </div>
 
                 <img
-                  src={`/images/projects/${problem?.image}`}
+                  src={`/images/case-study/${problem?.image}`}
                   alt={problem?.problem}
                   loading="lazy"
                   className="object-contain ml-auto shadow"
@@ -128,7 +128,7 @@ export default function CaseStudy() {
             ))}
         </div>
 
-        <div className="text-end lg:w-1/4 lg:ml-auto px-4">
+        <div className="text-end lg:w-2/5 lg:ml-auto px-4 mt-40">
           <Link
             className="font-display an-ease text-white/20 hover:text-white/70 w-fit text-lg"
             to={`/case-study/${nextStudy?.slug}`}
