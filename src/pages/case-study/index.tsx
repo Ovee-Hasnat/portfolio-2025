@@ -94,36 +94,70 @@ export default function CaseStudy() {
           </h3>
 
           {currentStudy?.problems &&
-            currentStudy?.problems?.length > 0 &&
-            currentStudy?.problems?.map((problem, index) => (
+            currentStudy.problems.length > 0 &&
+            currentStudy.problems.map((problem, index) => (
               <motion.div
+                key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{
                   opacity: 1,
                   y: 0,
                   transition: {
                     duration: 0.5,
-                    delay: 0.5,
+                    delay: 1,
                   },
                 }}
                 viewport={{ once: true }}
-                key={index}
-                className="mb-14 grid lg:grid-cols-2 gap-5"
+                className={`mb-14 grid lg:grid-cols-2 gap-5`}
               >
-                <div className="text-sm lg:text-lg self-center">
-                  <h5 className="font-display mb-2 md:mb-4">
-                    {problem?.problem}
-                  </h5>
-                  <p className="font-light text-justify">{problem?.solution}</p>
-                </div>
+                {/* Conditionally render image/text order based on index */}
+                {index % 2 === 0 ? (
+                  <>
+                    {/* Text on left */}
+                    <div className="text-sm lg:text-lg self-center order-2 lg:order-1">
+                      <h5 className="font-display mb-2 md:mb-4">
+                        {problem?.problem}
+                      </h5>
+                      <p className="font-light text-justify md:w-4/5">
+                        {problem?.solution}
+                      </p>
+                    </div>
 
-                <img
-                  src={`/images/case-study/${problem?.image}`}
-                  alt={problem?.problem}
-                  loading="lazy"
-                  className="object-contain ml-auto shadow"
-                  width="430px"
-                />
+                    {/* Image on right */}
+                    <div className="order-1 lg:order-2">
+                      <img
+                        src={`/images/case-study/${problem?.image}`}
+                        alt={problem?.problem}
+                        loading="lazy"
+                        className="object-contain mx-auto lg:ml-auto"
+                        width="430px"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* Image on left */}
+                    <div className="order-1 lg:order-1">
+                      <img
+                        src={`/images/case-study/${problem?.image}`}
+                        alt={problem?.problem}
+                        loading="lazy"
+                        className="object-contain mx-auto lg:mr-auto"
+                        width="430px"
+                      />
+                    </div>
+
+                    {/* Text on right */}
+                    <div className="text-sm lg:text-lg self-center order-2 lg:order-2 text-left lg:text-left">
+                      <h5 className="font-display mb-2 md:mb-4">
+                        {problem?.problem}
+                      </h5>
+                      <p className="font-light text-justify md:w-4/5">
+                        {problem?.solution}
+                      </p>
+                    </div>
+                  </>
+                )}
               </motion.div>
             ))}
         </div>
