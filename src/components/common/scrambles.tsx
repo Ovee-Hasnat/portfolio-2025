@@ -35,7 +35,7 @@ export default function Scrambles() {
       }}
       className="hidden md:block mt-14 text-center select-none max-w-64 md:max-w-max mx-auto h-9"
     >
-      <p className="text text-sm md:text-base text-zinc-700 font-light tracking-wide"></p>
+      <p className="text text-sm md:text-base text-zinc-600 font-light tracking-wide"></p>
     </motion.div>
   );
 }

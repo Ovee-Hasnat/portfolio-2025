@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <footer className="bg-zinc-950">
       <div className="max-w-screen-2xl mx-auto py-14 lg:py-24 text-zinc-700 px-6">
-        <p className="border-b border-zinc-800 text-zinc-800 pb-2 text-end text-sm tracking-wider">
+        <p className="border-b border-zinc-800 text-zinc-700 pb-2 text-end text-sm tracking-wider">
           coded with 🤍
         </p>
         <div className="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-10">
@@ -39,7 +39,7 @@ export default function Footer() {
                       href={social.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-zinc-800 hover:text-zinc-700 hover:underline"
+                      className="text-zinc-700 hover:text-zinc-700 hover:underline"
                     >
                       {social.title}
                     </a>
@@ -49,14 +49,14 @@ export default function Footer() {
 
               <div className="space-y-3">
                 <h4>email</h4>
-                <p className="text-zinc-800">hasnat.ovee@gmail.com</p>
-                <p className="text-zinc-800 opacity-0">hasnat.ovee@gmail.com</p>
+                <p className="text-zinc-700">hasnat.ovee@gmail.com</p>
+                <p className="text-zinc-700 opacity-0">hasnat.ovee@gmail.com</p>
 
                 <a
                   href={"#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-800 hover:text-zinc-700 hover:underline mt-8 block"
+                  className="text-zinc-700 hover:text-zinc-700 hover:underline mt-8 block"
                 >
                   Resume &#x2197;
                 </a>
@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl xl:text-8xl bg-gradient-to-b from-zinc-900/60 via-zinc-900/40 to-black inline-block text-transparent bg-clip-text font-display">
+          <h1 className="text-4xl md:text-6xl xl:text-8xl bg-gradient-to-b from-zinc-900/80 via-zinc-900/60 to-black inline-block text-transparent bg-clip-text font-display">
             &#xa9; {year}
           </h1>
         </div>

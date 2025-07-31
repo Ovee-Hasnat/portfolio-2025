@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="flex-center flex-col h-screen container mx-auto">
         <Scrambles />
 
-        <p className="md:hidden my-12 select-none text-sm text-zinc-700 font-light text-center">
+        <p className="md:hidden my-12 select-none text-sm text-zinc-600 font-light text-center">
           crafting seamless digital experiences <br /> since 2023.
         </p>
 
@@ -31,7 +31,7 @@ export default function Hero() {
         <HeroText />
 
         <div className="md:mb-4 text-center animate-fade-in">
-          <h2 className="text-sm md:text-base text-zinc-700 lowercase italic">
+          <h2 className="text-sm md:text-base text-zinc-600 lowercase italic">
             &#x5b; `Software Engineer`, `Photographer`, `Learner` &#x5d;
             {/* &#x7c; */}
           </h2>

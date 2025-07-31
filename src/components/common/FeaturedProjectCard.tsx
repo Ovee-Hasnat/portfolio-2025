@@ -55,7 +55,7 @@ export default function FeaturedProjectCard({
           {project?.title}
         </h1>
 
-        <p className="text-zinc-800 md:text-lg">{project?.description}</p>
+        <p className="text-zinc-700 md:text-lg">{project?.description}</p>
 
         <ul className="pt-5 flex gap-2 flex-wrap">
           {project?.tech.split(",").map((tech, index) => (
