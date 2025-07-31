@@ -18,7 +18,8 @@ export const experience = [
       },
       {
         project: "Vision Limo",
-        link: "https://iqlimo.com/",
+        // link: "https://iqlimo.com/",
+        link: "https://visionlimogroup.com/",
       },
       {
         project: "Bracnet Connect",
@@ -26,7 +27,7 @@ export const experience = [
       },
       {
         project: "Accounting Software for JSTU",
-        link: null,
+        link: "https://bsfmstu.solutionspin.com/",
       },
     ],
   },

@@ -38,7 +38,7 @@ export default function FeaturedProjects() {
         <div className="pt-10 block group">
           <Card>
             <Link
-              className="font-display an-ease text-white/50 group-hover:text-white text-lg text-center py-6 block w-full"
+              className="font-display an-ease text-white/50 group-hover:text-white md:text-lg text-center py-6 block w-full"
               to="/projects"
             >
               See all projects 🛠️

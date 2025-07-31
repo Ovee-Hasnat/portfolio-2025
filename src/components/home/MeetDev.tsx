@@ -27,18 +27,26 @@ export default function MeetDev() {
           Hi, I’m <span className="font-medium text-zinc-500">Ovee</span> 👋
         </h4>
 
-        <p>
+        {/* <p>
           a web developer passionate about building seamless, high-performance
           websites and web apps. With expertise in{" "}
           <span className="font-medium text-zinc-500">React.js</span>,{" "}
           <span className="font-medium text-zinc-500">Next.js</span>, and{" "}
           <span className="font-medium text-zinc-500">Laravel</span>, I create
           dynamic, scalable solutions tailored to your business needs.
+        </p> */}
+
+        <p>
+          I help businesses grow by turning ideas into fast, reliable, and
+          user-friendly websites and web applications. My goal is simple—create
+          digital solutions that help you reach more customers, work smarter,
+          and stand out online.
         </p>
 
         <h4>
-          Need a fast, secure, and user-friendly web solution? Let’s make it
-          happen! 🚀
+          Clear process, on-time delivery, and real results.
+          <br />
+          Let’s bring your vision to life. 🚀
         </h4>
 
         <span className="pt-10 block">
@@ -56,7 +64,7 @@ export default function MeetDev() {
         style={{
           x,
         }}
-        className="hidden lg:block text-[120px] font-display tracking-tighter text-black absolute left-0 z-0 top-32"
+        className="hidden lg:block text-[120px] font-display tracking-tighter text-black absolute left-0 z-0 top-28"
       >
         about
       </motion.h1>

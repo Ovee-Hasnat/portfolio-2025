@@ -49,13 +49,12 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black flex items-center">
-      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-6 h-full mb-10">
-        <p className="mb-10 font-light tracking-wide lg:text-lg text-zinc-500 text-center animate-fade-in">
-          <b>Let's discuss</b> the next big idea. 💡
-        </p>
+    <section className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+      <div className="max-w-screen-2xl mx-auto text-zinc-700 px-4 my-32">
+        <h2 className="text-7xl font-thin lowercase">Contact</h2>
+
         <motion.div
-          className="grid w-full grid-cols-1 gap-8 mx-auto sm:grid-cols-3 lg:gap-16"
+          className="mt-10 grid w-full grid-cols-1 gap-8 mx-auto sm:grid-cols-3 lg:gap-16"
           initial={{
             y: 100,
             opacity: 0,
@@ -73,7 +72,7 @@ export default function Contact() {
                   <a
                     href={s.href}
                     target="_blank"
-                    className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
+                    className="p-10 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
                   >
                     <span
                       className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-700 via-zinc-700/50 to-transparent"
@@ -97,7 +96,7 @@ export default function Contact() {
               return (
                 <Card>
                   <div
-                    className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 lg:pb-48 md:p-16 cursor-pointer h-full"
+                    className="p-10 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 lg:pb-48 md:p-16 cursor-pointer h-full"
                     onClick={handleCopyClick}
                   >
                     <span
@@ -120,7 +119,11 @@ export default function Contact() {
               );
           })}
         </motion.div>
+
+        <p className="mt-10 font-light tracking-wide lg:text-lg text-zinc-500 text-center animate-fade-in">
+          <b>Let's discuss</b> the next big idea. 💡
+        </p>
       </div>
-    </div>
+    </section>
   );
 }

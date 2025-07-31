@@ -51,7 +51,7 @@ export default function FeaturedProjectCard({
         className="lg:col-span-2 place-content-end md:space-y-3 hidden lg:block"
         dir="ltr"
       >
-        <h1 className="text-zinc-700 text-2xl md:text-4xl font-display">
+        <h1 className="text-zinc-600 text-2xl md:text-4xl font-display">
           {project?.title}
         </h1>
 
@@ -70,7 +70,7 @@ export default function FeaturedProjectCard({
 
         <span className="pt-10 block">
           <Link
-            className="font-display an-ease text-white/50 hover:text-white w-fit text-lg"
+            className="font-display an-ease text-zinc-700 hover:text-white w-fit text-lg"
             to={`/case-study/${project?.slug}`}
           >
             Explore this project &#x279D;
@@ -102,7 +102,7 @@ export default function FeaturedProjectCard({
 
         <span className="pt-6 block">
           <Link
-            className="font-display an-ease text-white/70 hover:text-white w-fit"
+            className="font-display an-ease text-zinc-700 hover:text-white w-fit"
             to={"/about"}
           >
             Read more &#x279D;

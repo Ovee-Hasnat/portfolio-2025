@@ -2,11 +2,15 @@ import { caseStudies } from "@/constants/caseStudies";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import NotFound from "../notFound";
+import { FaLink } from "react-icons/fa";
+import { Card } from "@/components/common/card";
+import { CaseStudyType } from "@/types/case-study";
+import { motion } from "motion/react";
 
 export default function CaseStudy() {
   const { slug } = useParams();
   const currentIndex = caseStudies.findIndex((study) => study.slug === slug);
-  const currentStudy = caseStudies[currentIndex];
+  const currentStudy: CaseStudyType | undefined = caseStudies[currentIndex];
   const nextStudy = caseStudies[(currentIndex + 1) % caseStudies.length];
 
   useEffect(() => {
@@ -19,10 +23,10 @@ export default function CaseStudy() {
   }
 
   return (
-    <section className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+    <section className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <div className="max-w-screen-2xl mx-auto text-zinc-700 my-32">
         <div
-          className="h-[50dvh] lg:h-[65dvh] w-full bg-fixed bg-center lg:bg-contain bg-no-repeat"
+          className="h-[50dvh] lg:h-[65dvh] w-full lg:bg-contain bg-center bg-fixed bg-no-repeat"
           style={{
             backgroundImage: `url(/images/projects/${currentStudy?.coverImage})`,
           }}
@@ -35,8 +39,23 @@ export default function CaseStudy() {
             {currentStudy?.title}
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-10 my-8 lg:my-16 text-xl">
-            <p>{currentStudy?.description}</p>
+          <div className="grid lg:grid-cols-2 gap-10 my-8 lg:my-16 lg:text-lg">
+            <div className="space-y-4">
+              <p>{currentStudy?.description}</p>
+              {currentStudy?.url && (
+                <a
+                  href={currentStudy?.url}
+                  target="_blank"
+                  className="block w-fit font-display text-base shadow-md"
+                >
+                  <Card>
+                    <span className="py-1.5 px-8 flex-center gap-2">
+                      <FaLink size={14} /> <span>Live link</span>
+                    </span>
+                  </Card>
+                </a>
+              )}
+            </div>
 
             <div className="space-y-4 text-end">
               <p>
@@ -56,9 +75,94 @@ export default function CaseStudy() {
               </ul>
             </div>
           </div>
+
+          {/* Problems and solves */}
+          <h3 className="text-3xl md:text-5xl font-thin py-12">
+            {currentStudy?.problems?.length > 0 ? (
+              <>
+                the challenges
+                <br />
+                &amp; my contributions -
+              </>
+            ) : (
+              <>
+                the case study is being written
+                <br />
+                &amp; not published yet!
+              </>
+            )}
+          </h3>
+
+          {currentStudy?.problems &&
+            currentStudy.problems.length > 0 &&
+            currentStudy.problems.map((problem, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    delay: 1,
+                  },
+                }}
+                viewport={{ once: true }}
+                className={`mb-14 grid lg:grid-cols-2 gap-5`}
+              >
+                {/* Conditionally render image/text order based on index */}
+                {index % 2 === 0 ? (
+                  <>
+                    {/* Text on left */}
+                    <div className="text-sm lg:text-lg self-center order-2 lg:order-1">
+                      <h5 className="font-display mb-2 md:mb-4">
+                        {problem?.problem}
+                      </h5>
+                      <p className="font-light text-justify md:w-4/5">
+                        {problem?.solution}
+                      </p>
+                    </div>
+
+                    {/* Image on right */}
+                    <div className="order-1 lg:order-2">
+                      <img
+                        src={`/images/case-study/${problem?.image}`}
+                        alt={problem?.problem}
+                        loading="lazy"
+                        className="object-contain mx-auto lg:ml-auto"
+                        width="430px"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* Image on left */}
+                    <div className="order-1 lg:order-1">
+                      <img
+                        src={`/images/case-study/${problem?.image}`}
+                        alt={problem?.problem}
+                        loading="lazy"
+                        className="object-contain mx-auto lg:mr-auto"
+                        width="430px"
+                      />
+                    </div>
+
+                    {/* Text on right */}
+                    <div className="text-sm lg:text-lg self-center order-2 lg:order-2 text-left lg:text-left">
+                      <h5 className="font-display mb-2 md:mb-4">
+                        {problem?.problem}
+                      </h5>
+                      <p className="font-light text-justify md:w-4/5">
+                        {problem?.solution}
+                      </p>
+                    </div>
+                  </>
+                )}
+              </motion.div>
+            ))}
         </div>
 
-        <div className="text-end lg:w-1/4 lg:ml-auto px-4">
+        <div className="text-end lg:w-2/5 lg:ml-auto px-4 mt-40">
           <Link
             className="font-display an-ease text-white/20 hover:text-white/70 w-fit text-lg"
             to={`/case-study/${nextStudy?.slug}`}

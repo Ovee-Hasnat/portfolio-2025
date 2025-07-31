@@ -8,7 +8,7 @@ import {
 
 export default function CTA_Home() {
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [60, -200]);
+  const y = useTransform(scrollYProgress, [0, 0.3], [120, -200]);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -23,7 +23,7 @@ export default function CTA_Home() {
         style={{
           transform: isInView ? "none" : "translateY(100px)",
           opacity: isInView ? 1 : 0,
-          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
         }}
         className=""
       >
