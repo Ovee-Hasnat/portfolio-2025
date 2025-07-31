@@ -24,7 +24,7 @@ export default function CaseStudy() {
 
   return (
     <section className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <div className="max-w-screen-2xl mx-auto text-zinc-700 my-32">
+      <div className="max-w-screen-2xl mx-auto text-zinc-600 my-32">
         <div
           className="h-[50dvh] lg:h-[65dvh] w-full lg:bg-contain bg-center bg-fixed bg-no-repeat"
           style={{

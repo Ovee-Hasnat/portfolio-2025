@@ -13,7 +13,7 @@ export default function NumberCard({
         {number}
         <span className="text-xl absolute -top-2 -right-3">{plus && "+"}</span>
       </span>
-      <p className="text-sm font-light md:text-base text-center text-zinc-700 group-hover:text-zinc-500 an-ease lowercase">
+      <p className="text-sm font-light md:text-base text-center text-zinc-600 group-hover:text-zinc-500 an-ease lowercase">
         {title}
       </p>
     </div>

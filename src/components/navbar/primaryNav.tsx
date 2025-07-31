@@ -134,7 +134,7 @@ export default function PrimaryNav() {
                   className={`text-sm md:text-base duration-500 ${
                     location.pathname === item.href
                       ? "text-zinc-500"
-                      : "text-zinc-700 hover:text-zinc-500"
+                      : "text-zinc-600 hover:text-zinc-500"
                   }`}
                 >
                   <span className="hidden md:block">{item.name}</span>

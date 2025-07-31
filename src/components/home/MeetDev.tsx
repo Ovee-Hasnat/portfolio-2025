@@ -22,19 +22,10 @@ export default function MeetDev() {
           Meet <br /> your dev
         </h2>
       </motion.div>
-      <div className="flex-1 lg:max-w-2xl space-y-4 md:text-lg font-light text-zinc-700 md:text-zinc-600 text-justify relative z-10">
+      <div className="flex-1 lg:max-w-2xl space-y-4 md:text-lg text-zinc-700 md:text-zinc-600 text-justify relative z-10">
         <h4>
           Hi, I’m <span className="font-medium text-zinc-500">Ovee</span> 👋
         </h4>
-
-        {/* <p>
-          a web developer passionate about building seamless, high-performance
-          websites and web apps. With expertise in{" "}
-          <span className="font-medium text-zinc-500">React.js</span>,{" "}
-          <span className="font-medium text-zinc-500">Next.js</span>, and{" "}
-          <span className="font-medium text-zinc-500">Laravel</span>, I create
-          dynamic, scalable solutions tailored to your business needs.
-        </p> */}
 
         <p>
           I help businesses grow by turning ideas into fast, reliable, and

@@ -90,7 +90,7 @@ function About() {
             </div>
           </div>
 
-          {/*  */}
+          {/* Git Contributions */}
           <div className="lg:col-span-1 border border-zinc-900 hover:border-zinc-800 rounded-xl py-4 lg:py-6">
             <h3 className="text-xl font-display text-zinc-500 mb-6 px-4 lg:px-6">
               ✔️ Contributions
@@ -105,7 +105,7 @@ function About() {
                 🏆 Let’s Work Together
               </h3>
 
-              <p className="text-zinc-800 leading-relaxed mb-6">
+              <p className="text-zinc-600 leading-relaxed mb-6">
                 Whether it’s a new build, bug fix, or a design handoff — let’s
                 get it done, fast and right.
               </p>
@@ -113,7 +113,7 @@ function About() {
 
             <Link
               to={"/contact"}
-              className="text-zinc-700 font-display hover:text-zinc-600 text-lg"
+              className="text-zinc-600 font-display hover:text-zinc-600 text-lg"
             >
               Reach out, right now ➝
             </Link>

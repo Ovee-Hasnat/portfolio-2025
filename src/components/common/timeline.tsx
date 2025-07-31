@@ -22,8 +22,8 @@ const Timeline: React.FC<TimelineProps> = ({ items }) => {
             </h4>
           </div>
           <div className="ms-4 pb-4 md:ms-0">
-            <h4 className="mb-1 font-medium text-zinc-700">{item.title}</h4>
-            <p className="mb-3 text-zinc-800 text-">{item.description}</p>
+            <h4 className="mb-1 font-medium text-zinc-600">{item.title}</h4>
+            <p className="mb-3 text-zinc-700/80 text-">{item.description}</p>
           </div>
         </li>
       ))}
