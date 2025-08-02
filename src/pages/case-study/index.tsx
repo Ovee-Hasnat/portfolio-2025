@@ -104,7 +104,7 @@ export default function CaseStudy() {
                   y: 0,
                   transition: {
                     duration: 0.5,
-                    delay: 1,
+                    delay: 0.5,
                   },
                 }}
                 viewport={{ once: true }}
