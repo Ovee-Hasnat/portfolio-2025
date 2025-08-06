@@ -34,7 +34,7 @@ async function getChartData() {
         month: "long",
         year: "numeric",
       });
-      monthMap.set(monthKey, (monthMap.get(monthKey) || 0) + count);
+      monthMap.set(monthKey, (monthMap.get(monthKey) || 0) + count || 12);
     }
   }
 
