@@ -1,19 +1,19 @@
 const socials = [
   {
     title: "LinkedIn",
-    link: "http://www.linkedin.com",
+    link: "https://www.linkedin.com/in/hasnat-ovee/",
   },
   {
     title: "GitHub",
-    link: "http://www.github.com",
+    link: "http://www.github.com/Ovee-Hasnat",
+  },
+  {
+    title: "Upwork",
+    link: "https://www.upwork.com/freelancers/~0100349f45b74ac206?",
   },
   {
     title: "Fiverr",
     link: "http://www.fiverr.com",
-  },
-  {
-    title: "Upwork",
-    link: "http://www.upwork.com",
   },
 ];
 
@@ -48,12 +48,12 @@ export default function Footer() {
               </ul>
 
               <div className="space-y-3">
-                <h4>email</h4>
+                <p className="text-zinc-700">+880 1521 436 302</p>
                 <p className="text-zinc-700">hasnat.ovee@gmail.com</p>
                 <p className="text-zinc-700 opacity-0">hasnat.ovee@gmail.com</p>
 
                 <a
-                  href={"#"}
+                  href="https://drive.google.com/drive/folders/1wDOqZSD2qcZ1mM0XfEYGVbjYRI65ryUw?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-zinc-700 hover:text-zinc-700 hover:underline mt-8 block"

@@ -1,5 +1,13 @@
 export const featuredProjects = [
   {
+    title: "ERP for BRACNet Limited",
+    description:
+      "A leading job portal for Bangladeshi public service sector and private businesses to connect with job seekers and recruiters.",
+    image: "brac_erp_home.png",
+    slug: "alljobs",
+    tech: "php, laravel, javascript, jquery, ajax, postgresql, eloquent",
+  },
+  {
     title: "Alljobs by Teletalk",
     description:
       "A leading job portal for Bangladeshi public service sector and private businesses to connect with job seekers and recruiters.",
@@ -23,14 +31,14 @@ export const featuredProjects = [
     slug: "jstu",
     tech: "php, laravel, javascript, bootstrap 5, jquery, yajra js",
   },
-  {
-    title: "Bigfish- Telegram Game",
-    description:
-      "Bigfish is a tap-to-earn crypto game on Telegram where you simulate running a crypto exchange.",
-    image: "bigfish_home_01.png",
-    slug: "bigfish",
-    tech: "javascript, typescript, react.js, zustand, tailwind css, axios, shadcn ui",
-  },
+  // {
+  //   title: "Bigfish- Telegram Game",
+  //   description:
+  //     "Bigfish is a tap-to-earn crypto game on Telegram where you simulate running a crypto exchange.",
+  //   image: "bigfish_home_01.png",
+  //   slug: "bigfish",
+  //   tech: "javascript, typescript, react.js, zustand, tailwind css, axios, shadcn ui",
+  // },
   // {
   //   title: "Selftest",
   //   description:

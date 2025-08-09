@@ -1,5 +1,19 @@
 export const caseStudies = [
   {
+    title: "ERP for BRACNet Limited",
+    description:
+      "Smart Jute Information Software streamlines jute data management, trade tracking, and reporting for the Ministry of Textiles & Jute, Government of Bangladesh.",
+    coverImage: "brac_erp_home.png",
+    slug: "bracerp",
+    type: "ERP System",
+    tech: "php, laravel, javascript, jquery, ajax, postgresql, eloquent",
+    workScope: "Frontend & Backend",
+    url: null,
+    problems: [
+      // "Authentication, Role based authorization, Dashboard with real-time data visualization, Employee Management, User Profile, Master Data Management, Data entry forms, Data approval layers, various Report generation, searching and sorting, report on dynamic criterias, Report export to PDF and CSV fromat, Admin Panel ",
+    ],
+  },
+  {
     title: "Smart Jute Information Software",
     description:
       "Smart Jute Information Software streamlines jute data management, trade tracking, and reporting for the Ministry of Textiles & Jute, Government of Bangladesh.",
@@ -74,7 +88,7 @@ export const caseStudies = [
     title: "Shippers' Council Bangladesh",
     description:
       "The website serves as the official platform of the Shippers' Council of Bangladesh. It provides information about the council's activities, news, publications, member services, and events, aiming to keep stakeholders updated and connected within the shipping and export community.",
-    coverImage: "scb_home_01.png",
+    coverImage: "scb_home.png",
     slug: "scb",
     type: "Website",
     tech: "javascript, react.js, next.js, node.js, express.js, mySQL, prisma, tailwind css, axios",
