@@ -1,10 +1,10 @@
 import "./cts_styles.css";
 import { Link } from "react-router-dom";
-import sjis from "/images/bg/sjis.png";
-import alljobs from "/images/bg/alljobs_fullpage.png";
-import decor from "/images/bg/decor_fullpage.png";
-import lwscart from "/images/bg/lwscart_fullpage.png";
-import bracnet from "/images/bg/bracnet_fullpage.png";
+import sjis from "/images/bg/sjis.webp";
+import alljobs from "/images/bg/alljobs_fullpage.webp";
+import decor from "/images/bg/decor_fullpage.webp";
+import lwscart from "/images/bg/lwscart_fullpage.webp";
+import bracnet from "/images/bg/bracnet_fullpage.webp";
 
 export default function CTAGlobal() {
   return (
