@@ -51,9 +51,11 @@ export default function FeaturedProjectCard({
         className="lg:col-span-2 place-content-end md:space-y-3 hidden lg:block"
         dir="ltr"
       >
-        <h1 className="text-zinc-600 text-2xl md:text-4xl font-display">
-          {project?.title}
-        </h1>
+        <Link to={`/case-study/${project?.slug}`}>
+          <h1 className="text-zinc-600 text-2xl md:text-4xl font-display hover:text-white an-ease">
+            {project?.title}
+          </h1>
+        </Link>
 
         <p className="text-zinc-700 md:text-lg">{project?.description}</p>
 
@@ -83,9 +85,11 @@ export default function FeaturedProjectCard({
         className="pt-10 lg:col-span-2 place-content-end md:space-y-3 lg:hidden"
         dir="ltr"
       >
-        <h1 className="text-zinc-600 text-2xl md:text-5xl font-display w-[90%]">
-          {project?.title}
-        </h1>
+        <Link to={`/case-study/${project?.slug}`}>
+          <h1 className="text-zinc-600 text-2xl md:text-5xl font-display w-[90%]">
+            {project?.title}
+          </h1>
+        </Link>
 
         <p className="text-zinc-700 md:text-lg">{project?.description}</p>
 
@@ -102,8 +106,8 @@ export default function FeaturedProjectCard({
 
         <span className="pt-6 block">
           <Link
-            className="font-display an-ease text-zinc-700 hover:text-white w-fit"
-            to={"/about"}
+            className="font-display an-ease text-zinc-700 hover:text-white w-fit text-lg"
+            to={`/case-study/${project?.slug}`}
           >
             Read more &#x279D;
           </Link>

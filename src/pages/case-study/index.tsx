@@ -31,7 +31,7 @@ export default function CaseStudy() {
             backgroundImage: `url(/images/projects/${currentStudy?.coverImage})`,
           }}
         >
-          {/* <div className="w-full h-full bg-gradient-to-t from-black/70 to-transparent" /> */}
+          <div className="w-full h-full bg-gradient-to-t from-black/70 to-transparent" />
         </div>
 
         <div className="min-h-svh px-4">
@@ -108,7 +108,7 @@ export default function CaseStudy() {
                   },
                 }}
                 viewport={{ once: true }}
-                className={`mb-14 grid lg:grid-cols-2 gap-5`}
+                className={`mb-14 grid lg:grid-cols-2 gap-5 place-items-center`}
               >
                 {/* Conditionally render image/text order based on index */}
                 {index % 2 === 0 ? (
@@ -130,7 +130,7 @@ export default function CaseStudy() {
                         alt={problem?.problem}
                         loading="lazy"
                         className="object-contain mx-auto lg:ml-auto"
-                        width="430px"
+                        width="600px"
                       />
                     </div>
                   </>
@@ -143,16 +143,16 @@ export default function CaseStudy() {
                         alt={problem?.problem}
                         loading="lazy"
                         className="object-contain mx-auto lg:mr-auto"
-                        width="430px"
+                        width="600px"
                       />
                     </div>
 
                     {/* Text on right */}
-                    <div className="text-sm lg:text-lg self-center order-2 lg:order-2 text-left lg:text-left">
+                    <div className="text-sm lg:text-lg self-center order-2 lg:order-2 md:w-4/5 md:ml-auto">
                       <h5 className="font-display mb-2 md:mb-4">
                         {problem?.problem}
                       </h5>
-                      <p className="font-light text-justify md:w-4/5">
+                      <p className="font-light text-justify">
                         {problem?.solution}
                       </p>
                     </div>
