@@ -9,8 +9,16 @@ export const experience = [
     website: "https://solutionspin.com/",
     contributions: [
       {
+        project: "BRACNet ERP",
+        link: "/case-study/bracerp",
+      },
+      {
         project: "Alljobs by Teletalk",
         link: "https://alljobs.teletalk.com.bd/",
+      },
+      {
+        project: "Accounting Software for JSTU",
+        link: "https://bsfmstu.solutionspin.com/",
       },
       {
         project: "Selftest",
@@ -22,12 +30,8 @@ export const experience = [
         link: "https://visionlimogroup.com/",
       },
       {
-        project: "Bracnet Connect",
+        project: "BRACNet Connect",
         link: "https://bracnetconnect.net/",
-      },
-      {
-        project: "Accounting Software for JSTU",
-        link: "https://bsfmstu.solutionspin.com/",
       },
     ],
   },

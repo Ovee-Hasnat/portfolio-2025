@@ -2,7 +2,7 @@ export const caseStudies = [
   {
     title: "ERP for BRACNet Limited",
     description:
-      "Smart Jute Information Software streamlines jute data management, trade tracking, and reporting for the Ministry of Textiles & Jute, Government of Bangladesh.",
+      "A large-scale enterprise platform covering HR, Payroll, Finance, Accounts, CRM, SCM, Sales, Inventory, and Billing. I contributed to the HR & Payroll modules, developing features for employee management, attendance & leave tracking, roster scheduling, salary configuration, and payroll processing.",
     coverImage: "brac_erp_home.webp",
     slug: "bracerp",
     type: "ERP System",
@@ -91,11 +91,58 @@ export const caseStudies = [
     coverImage: "sjis_home_01.webp",
     slug: "sjis",
     type: "Web Application",
-    tech: "javascript, react.js, tailwind css, axios, chart.js, keep react ui",
+    tech: "javascript, react.js, redux-toolkit, tailwind css, axios, chart.js, keep react ui",
     workScope: "Frontend",
     url: "https://sjis.dgjute.gov.bd/",
     problems: [
-      // "Authentication, Role based authorization, Dashboard with real-time data visualization, Employee Management, User Profile, Master Data Management, Data entry forms, Data approval layers, various Report generation, searching and sorting, report on dynamic criterias, Report export to PDF and CSV fromat, Admin Panel ",
+      {
+        problem: "Login / User Registration",
+        solution:
+          "I implemented a secure authentication system using a traditional REST API approach with Redux Toolkit for storing tokens, refresh tokens, and essential user data. User registration is controlled — only authorized personnel can create new accounts, eliminating the risk of unauthorized sign-ups. Once registered, users can log in with their credentials and update their own profiles. This controlled onboarding process ensures that only verified users can access the system, which is crucial for a government-level data management platform.",
+        image: "sjis_login.webp",
+      },
+      {
+        problem: "Dashboard— Realtime Data",
+        solution:
+          "Developed a role-specific, permission-based dashboard that serves as the central hub for nationwide jute data. The dashboard displays real-time aggregated statistics and activities from across Bangladesh, allowing decision-makers to act quickly. I integrated Chart.js for visualizations and applied smart caching to balance performance with up-to-date information. This ensures that every stakeholder sees exactly the data they’re authorized to view — nothing more, nothing less.",
+        image: "sjis_dashboard.webp",
+      },
+      {
+        problem: "User Management & Role-Based Authorization",
+        solution:
+          "A complete user management module where admins and permitted staff can create, update, or deactivate users, assign roles, and manage access rights. All operations interact with the backend via Axios API calls, with strict error handling to prevent UI crashes. Reports of user activities can be generated, filtered, and downloaded for administrative purposes. Role-based authorization is enforced at both frontend and backend levels, ensuring that sensitive actions remain locked to the right people.",
+        image: "sjis_users.webp",
+      },
+      {
+        problem: "Master Setup",
+        solution:
+          "The Master Data Setup process configures essential base data — zones, districts, and office records — without which the system cannot function. User assignments are tied to this master data to ensure that all subsequent operations, from data entry to reporting, are linked to a specific organizational hierarchy. This creates a strong foundation for data consistency across the entire platform.",
+        image: "sjis_master.webp",
+      },
+      {
+        problem: "Data Entry Form",
+        solution:
+          "I developed validated, role-aware data entry forms that collect jute-related information from across the country. Using React Hook Form, I implemented robust client-side validation, paired with backend checks to prevent incomplete or incorrect data submissions. Some forms require multi-role collaboration — one role begins the entry, another completes it — and the system enforces these workflows seamlessly. Approval layers ensure data integrity before it’s accepted into the system.",
+        image: "sjis_entry_form.webp",
+      },
+      {
+        problem: "Data Visualization",
+        solution:
+          "Role-based data viewing capabilities where permitted users can search, sort, and filter datasets by multiple parameters. Access control ensures users only see the data relevant to their role and jurisdiction. This prevents information overload while safeguarding sensitive records, making it easier for officials to focus on actionable insights.",
+        image: "sjis_data_visual.webp",
+      },
+      {
+        problem: "Report Generation",
+        solution:
+          "The report generation module where authorized users can access reports segmented by office, zone, date, or month. This role-based access ensures that sensitive trade and production figures are not exposed to unauthorized personnel, while still giving decision-makers the granular visibility they need.",
+        image: "sjis_report_search.webp",
+      },
+      {
+        problem: "Report Download",
+        solution:
+          "Implemented official-format report downloads in both PDF and Excel, designed to match the Government of Bangladesh’s reporting standards. Each report includes approval layers, signatures, and role-based access checks, ensuring that only authorized and verified reports leave the system. This automated the previously manual, time-consuming reporting process, allowing for instant, compliant report generation.",
+        image: "sjis_report.webp",
+      },
     ],
   },
   {
@@ -105,7 +152,7 @@ export const caseStudies = [
     coverImage: "alljobs_home.webp",
     slug: "alljobs",
     type: "Web Application",
-    tech: "javascript, typescript, react.js, redux, tailwind css, firebase, axios, chart.js, headless ui",
+    tech: "typescript, react.js, redux, tailwind css, firebase, axios, chart.js, headless ui",
     workScope: "Frontend",
     url: "https://alljobs.teletalk.com.bd/",
     problems: [

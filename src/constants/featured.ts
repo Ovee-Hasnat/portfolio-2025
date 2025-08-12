@@ -2,7 +2,7 @@ export const featuredProjects = [
   {
     title: "ERP for BRACNet Limited",
     description:
-      "A leading job portal for Bangladeshi public service sector and private businesses to connect with job seekers and recruiters.",
+      "An enterprise ERP system covering HR, Payroll, Finance, CRM, SCM, etc where I contributed to the key features in the HR & Payroll modules to optimize workforce and salary management.",
     image: "brac_erp_home.webp",
     slug: "bracerp",
     tech: "php, laravel, javascript, jquery, ajax, postgresql, eloquent",
@@ -13,7 +13,7 @@ export const featuredProjects = [
       "A leading job portal for Bangladeshi public service sector and private businesses to connect with job seekers and recruiters.",
     image: "alljobs_home.webp",
     slug: "alljobs",
-    tech: "javascript, typescript, react.js, redux, tailwind css, firebase, axios, chart.js, headless ui",
+    tech: "typescript, react.js, redux, tailwind css, firebase, axios, chart.js, headless ui",
   },
   {
     title: "Smart Jute Information Software",
@@ -21,7 +21,7 @@ export const featuredProjects = [
       "Smart Jute Information Software streamlines jute data management, trade tracking, and reporting for the Bangladesh government.",
     image: "sjis_home_01.webp",
     slug: "sjis",
-    tech: "javascript, react.js, tailwind css, axios, chart.js, keep react ui",
+    tech: "javascript, react.js, redux-toolkit, tailwind css, axios, chart.js, keep react ui",
   },
   {
     title: "Accounting Software for JSTU",
