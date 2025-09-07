@@ -105,6 +105,7 @@ export default function PrimaryNav() {
             <Link to="/">
               <img
                 src={logo_gif}
+                fetchPriority="high"
                 alt="Logo"
                 className="w-10 opacity-60 hover:opacity-90 duration-300 ease-linear rounded-md"
               />

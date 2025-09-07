@@ -1,11 +1,12 @@
 import photo from "/images/profile/profile_1.webp";
 import Timeline from "@/components/common/timeline";
 
-import { useEffect } from "react";
+import { lazy, useEffect } from "react";
 import { timelineData } from "@/constants/timeline";
 import SkillsetCard from "@/components/about/skillsetCard";
 import { Link } from "react-router-dom";
-import GitGraph from "@/components/about/gitGraph";
+// import GitGraph from "@/components/about/gitGraph";
+const GitGraph = lazy(() => import("../../components/about/gitGraph"));
 
 function About() {
   useEffect(() => {
