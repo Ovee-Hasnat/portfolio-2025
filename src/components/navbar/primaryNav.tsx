@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, useAnimationControls } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 
 import {
   AiOutlineCrown,
@@ -19,36 +19,32 @@ const navigation = [
 ];
 
 export default function PrimaryNav() {
-  const controls = useAnimation();
+  const controls = useAnimationControls();
   const [expanded, setExpanded] = useState(false);
   const location = useLocation();
+  const timeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const startAnimation = async () => {
-      // await controls.start({
-      //   y: 0, // Drops from the top
-      //   opacity: 1,
-      //   transition: { duration: 0.3, ease: "easeOut" },
-      // });
+    timeoutRef.current = window.setTimeout(() => {
+      controls.start({
+        width: "100%",
+        paddingLeft: "1rem",
+        paddingRight: "1rem",
+        transition: {
+          duration: 0.5,
+          ease: "easeInOut",
+        },
+      });
 
-      // Wait before expanding
-      setTimeout(() => {
-        controls.start({
-          width: "100%", // Expands to full width
-          paddingLeft: "1rem",
-          paddingRight: "1rem",
-          transition: {
-            duration: 0.5, // Smooth expansion
-            ease: "easeInOut",
-          },
-        });
+      setExpanded(true);
+    }, 1500);
 
-        setExpanded(true);
-      }, 1500); // Delay before expanding
+    return () => {
+      if (timeoutRef.current !== null) {
+        window.clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
     };
-
-    // controls.set({ y: "-100%", opacity: 0 }); // Start from above the screen
-    startAnimation();
   }, [controls]);
 
   return (
@@ -105,7 +101,8 @@ export default function PrimaryNav() {
             <Link to="/">
               <img
                 src={logo_gif}
-                fetchPriority="high"
+                fetchPriority="auto"
+                decoding="async"
                 alt="Logo"
                 className="w-10 opacity-60 hover:opacity-90 duration-300 ease-linear rounded-md"
               />

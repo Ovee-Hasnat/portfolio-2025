@@ -6,7 +6,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 export default defineConfig({
   plugins: [
     react(),
-    visualizer({ open: true }), // opens a visual report after build
+    visualizer({ open: false }), // keep report generation without auto-opening tabs
   ],
   resolve: {
     alias: {

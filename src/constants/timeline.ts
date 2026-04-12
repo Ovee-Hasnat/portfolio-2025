@@ -9,14 +9,19 @@ export const timelineData = [
     title: "🙋‍♂️ Software Developer",
     description: "Trainee, Ascent Group",
   },
+  // {
+  //   date: "2024",
+  //   title: "👨‍💻 Frontend Engineer",
+  //   description: "Contractual, Tech Solution Factory",
+  // },
   {
     date: "2024",
-    title: "👨‍💻 Frontend Engineer",
-    description: "Contractual, Tech Solution Factory",
+    title: "👨‍💻 Software Engineer",
+    description: "Fulltime, SolutionSpin Limited",
   },
   {
     date: "Now",
     title: "🚀 Software Engineer",
-    description: "Fulltime, SolutionSpin Limited",
+    description: "Fulltime, CodersBucket Limited",
   },
 ];

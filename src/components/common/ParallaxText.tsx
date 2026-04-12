@@ -2,13 +2,14 @@ import "./p_text.style.css";
 import { ReactNode, useRef } from "react";
 import {
   motion,
+  useAnimationFrame,
+  useInView,
+  useMotionValue,
   useScroll,
   useSpring,
   useTransform,
-  useMotionValue,
   useVelocity,
-  useAnimationFrame,
-} from "framer-motion";
+} from "motion/react";
 import { wrap } from "@motionone/utils";
 
 interface ParallaxProps {
@@ -20,6 +21,8 @@ export default function ParallaxText({
   children,
   baseVelocity = 100,
 }: ParallaxProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { amount: 0.2 });
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -40,6 +43,8 @@ export default function ParallaxText({
 
   const directionFactor = useRef<number>(1);
   useAnimationFrame((_t, delta) => {
+    if (!isInView) return;
+
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
     /**
@@ -65,7 +70,7 @@ export default function ParallaxText({
    * dynamically generated number of children.
    */
   return (
-    <div className="parallax">
+    <div ref={containerRef} className="parallax">
       <motion.div
         className="scroller text-zinc-800/70 cursor-default select-none"
         style={{ x }}

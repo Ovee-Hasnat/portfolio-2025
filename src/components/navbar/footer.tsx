@@ -25,7 +25,7 @@ export default function Footer() {
     <footer className="bg-zinc-950">
       <div className="max-w-screen-2xl mx-auto py-14 lg:py-24 text-zinc-700 px-6">
         <p className="border-b border-zinc-800 text-zinc-700 pb-2 text-end text-sm tracking-wider">
-          coded with 🤍
+          built with 🧠
         </p>
         <div className="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <div className="flex-1 max-w-sm">
