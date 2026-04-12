@@ -14,7 +14,7 @@ async function getChartData() {
   if (cache) return cache;
 
   const res = await fetch(
-    "https://github-contributions-api.jogruber.de/v4/Ovee-Hasnat?y=last",
+    "https://github-contributions-api.jogruber.de/v4/abuhasnat-cb?y=last",
     { cache: "force-cache" }
   );
   if (!res.ok) throw new Error("Failed to fetch chart data");
