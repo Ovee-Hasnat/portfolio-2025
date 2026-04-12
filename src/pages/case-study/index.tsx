@@ -1,6 +1,6 @@
 import { caseStudies } from "@/constants/caseStudies";
-import { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { Link, useLocation, useParams } from "react-router-dom";
 import NotFound from "../notFound";
 import { FaLink } from "react-icons/fa";
 import { Card } from "@/components/common/card";
@@ -8,18 +8,43 @@ import { CaseStudyType } from "@/types/case-study";
 import { motion } from "motion/react";
 
 export default function CaseStudy() {
+  const location = useLocation();
   const { slug } = useParams();
   const currentIndex = caseStudies.findIndex((study) => study.slug === slug);
-  const currentStudy: CaseStudyType | undefined = caseStudies[currentIndex];
-  const nextStudy = caseStudies[(currentIndex + 1) % caseStudies.length];
+  const hasValidSlug = currentIndex >= 0;
+  const currentStudy: CaseStudyType | undefined = hasValidSlug
+    ? caseStudies[currentIndex]
+    : undefined;
+  const nextStudy = hasValidSlug
+    ? caseStudies[(currentIndex + 1) % caseStudies.length]
+    : undefined;
+  const isCaseStudyPath = location.pathname.startsWith("/case-study/");
+  const lastValidStudyRef = useRef<CaseStudyType | null>(null);
+  const lastNextStudyRef = useRef<CaseStudyType | null>(null);
+
+  if (currentStudy) {
+    lastValidStudyRef.current = currentStudy;
+  }
+  if (nextStudy) {
+    lastNextStudyRef.current = nextStudy;
+  }
+
+  const resolvedStudy = currentStudy ?? lastValidStudyRef.current;
+  const resolvedNextStudy = nextStudy ?? lastNextStudyRef.current;
 
   useEffect(() => {
+    if (!isCaseStudyPath || !hasValidSlug) return;
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentIndex, slug, currentStudy, nextStudy]);
+  }, [hasValidSlug, isCaseStudyPath, slug]);
 
-  // Fallback to 404 if slug is invalid
-  if (currentIndex < 0) {
+  // During exit animations, this route can remain mounted briefly while params
+  // already changed. Keep the last valid content to preserve smooth transitions.
+  // Show 404 only when user is actually on an invalid case-study URL.
+  if (isCaseStudyPath && (!hasValidSlug || !slug) && !resolvedStudy) {
     return <NotFound />;
+  }
+  if (!resolvedStudy) {
+    return null;
   }
 
   return (
@@ -28,7 +53,7 @@ export default function CaseStudy() {
         <div
           className="h-[50dvh] lg:h-[65dvh] w-full bg-cover lg:bg-contain bg-center bg-scroll lg:bg-fixed bg-no-repeat"
           style={{
-            backgroundImage: `url(/images/projects/${currentStudy?.coverImage})`,
+            backgroundImage: `url(/images/projects/${resolvedStudy?.coverImage})`,
           }}
         >
           <div className="w-full h-full bg-gradient-to-t from-black/70 to-transparent" />
@@ -36,15 +61,15 @@ export default function CaseStudy() {
 
         <div className="min-h-svh px-4">
           <h2 className="text-6xl lg:text-8xl text-zinc-200 font-display -mt-7 lg:-mt-12">
-            {currentStudy?.title}
+            {resolvedStudy?.title}
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-10 my-8 lg:my-16 lg:text-lg">
             <div className="space-y-4">
-              <p>{currentStudy?.description}</p>
-              {currentStudy?.url && (
+              <p>{resolvedStudy?.description}</p>
+              {resolvedStudy?.url && (
                 <a
-                  href={currentStudy?.url}
+                  href={resolvedStudy?.url}
                   target="_blank"
                   className="block w-fit font-display text-base shadow-md"
                 >
@@ -60,11 +85,11 @@ export default function CaseStudy() {
             <div className="space-y-4 text-end">
               <p>
                 <span className="font-light">my contributions - </span>
-                <span className="font-semibold">{currentStudy?.workScope}</span>
+                <span className="font-semibold">{resolvedStudy?.workScope}</span>
               </p>
 
               <ul className="flex justify-end gap-2 flex-wrap">
-                {currentStudy?.tech.split(",").map((tech, index) => (
+                {resolvedStudy.tech.split(",").map((tech, index) => (
                   <li
                     className="py-1 px-3 bg-zinc-900/60 text-zinc-600 text-sm rounded-lg font-display"
                     key={index}
@@ -78,7 +103,7 @@ export default function CaseStudy() {
 
           {/* Problems and solves */}
           <h3 className="text-3xl md:text-5xl font-thin py-12">
-            {currentStudy?.problems?.length > 0 ? (
+            {resolvedStudy?.problems?.length > 0 ? (
               <>
                 the challenges
                 <br />
@@ -93,9 +118,9 @@ export default function CaseStudy() {
             )}
           </h3>
 
-          {currentStudy?.problems &&
-            currentStudy.problems.length > 0 &&
-            currentStudy.problems.map((problem, index) => (
+          {resolvedStudy?.problems &&
+            resolvedStudy.problems.length > 0 &&
+            resolvedStudy.problems.map((problem, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
@@ -167,13 +192,15 @@ export default function CaseStudy() {
         </div>
 
         <div className="text-end lg:w-2/5 lg:ml-auto px-4 mt-40">
-          <Link
-            className="font-display an-ease text-white/20 hover:text-white/70 w-fit text-lg"
-            to={`/case-study/${nextStudy?.slug}`}
-          >
-            <span>next &#x279D;</span>
-            <h2 className="text-4xl mt-2">{nextStudy?.title}</h2>
-          </Link>
+          {resolvedNextStudy && (
+            <Link
+              className="font-display an-ease text-white/20 hover:text-white/70 w-fit text-lg"
+              to={`/case-study/${resolvedNextStudy.slug}`}
+            >
+              <span>next &#x279D;</span>
+              <h2 className="text-4xl mt-2">{resolvedNextStudy.title}</h2>
+            </Link>
+          )}
         </div>
       </div>
     </section>
