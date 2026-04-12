@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/chart";
 import { Bar, BarChart, XAxis } from "recharts";
 import { useEffect, useState } from "react";
-import { Suspense } from "react";
 
 // API fetch function
 let cache: { month: string; commit: number }[] | null = null;
@@ -120,9 +119,5 @@ function ChartContent() {
 }
 
 export default function GitGraph() {
-  return (
-    <Suspense fallback={<div>Loading chart...</div>}>
-      <ChartContent />
-    </Suspense>
-  );
+  return <ChartContent />;
 }

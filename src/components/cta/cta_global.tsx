@@ -1,4 +1,6 @@
 import "./cts_styles.css";
+import { useInView } from "motion/react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import sjis from "/images/bg/sjis.webp";
 import alljobs from "/images/bg/alljobs_fullpage.webp";
@@ -7,14 +9,39 @@ import lwscart from "/images/bg/lwscart_fullpage.webp";
 import bracnet from "/images/bg/bracnet_fullpage.webp";
 
 export default function CTAGlobal() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const shouldLoadImages = useInView(sectionRef, {
+    once: true,
+    amount: 0.1,
+  });
+
   return (
-    <section className="max-w-screen-2xl mx-auto section-reveal grid grid-cols-2 md:grid-cols-3 gap-2 relative overflow-hidden py-2 px-2">
+    <section
+      ref={sectionRef}
+      className="max-w-screen-2xl mx-auto section-reveal grid grid-cols-2 md:grid-cols-3 gap-2 relative overflow-hidden py-2 px-2"
+    >
       <div className="marquee">
         <div className="marquee-cover"></div>
         <div className="track-vertical-alt">
           <div className="space-y-4">
-            <img src={decor} alt="SJIS" loading="lazy" />
-            <img src={alljobs} alt="SJIS" loading="lazy" />
+            {shouldLoadImages && (
+              <>
+                <img
+                  src={decor}
+                  alt="Decor project preview"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+                <img
+                  src={alljobs}
+                  alt="AllJobs project preview"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -23,8 +50,24 @@ export default function CTAGlobal() {
         <div className="marquee-cover"></div>
         <div className="track-vertical">
           <div className="space-y-4">
-            <img src={bracnet} alt="SJIS" loading="lazy" />
-            <img src={lwscart} alt="SJIS" loading="lazy" />
+            {shouldLoadImages && (
+              <>
+                <img
+                  src={bracnet}
+                  alt="BracNet project preview"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+                <img
+                  src={lwscart}
+                  alt="LWSCart project preview"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -33,8 +76,24 @@ export default function CTAGlobal() {
         <div className="marquee-cover"></div>
         <div className="track-vertical-alt">
           <div className="space-y-4">
-            <img src={sjis} alt="SJIS" loading="lazy" />
-            <img src={decor} alt="SJIS" loading="lazy" />
+            {shouldLoadImages && (
+              <>
+                <img
+                  src={sjis}
+                  alt="SJIS project preview"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+                <img
+                  src={decor}
+                  alt="Decor project preview"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+              </>
+            )}
           </div>
         </div>
       </div>

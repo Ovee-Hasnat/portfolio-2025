@@ -26,7 +26,7 @@ export default function CaseStudy() {
     <section className="min-h-screen overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <div className="max-w-screen-2xl mx-auto text-zinc-600 my-32">
         <div
-          className="h-[50dvh] lg:h-[65dvh] w-full lg:bg-contain bg-center bg-fixed bg-no-repeat"
+          className="h-[50dvh] lg:h-[65dvh] w-full bg-cover lg:bg-contain bg-center bg-scroll lg:bg-fixed bg-no-repeat"
           style={{
             backgroundImage: `url(/images/projects/${currentStudy?.coverImage})`,
           }}
@@ -129,8 +129,10 @@ export default function CaseStudy() {
                         src={`/images/case-study/${problem?.image}`}
                         alt={problem?.problem}
                         loading="lazy"
+                        decoding="async"
                         className="object-contain mx-auto lg:ml-auto"
-                        width="600px"
+                        width={600}
+                        height={338}
                       />
                     </div>
                   </>
@@ -142,8 +144,10 @@ export default function CaseStudy() {
                         src={`/images/case-study/${problem?.image}`}
                         alt={problem?.problem}
                         loading="lazy"
+                        decoding="async"
                         className="object-contain mx-auto lg:mr-auto"
-                        width="600px"
+                        width={600}
+                        height={338}
                       />
                     </div>
 

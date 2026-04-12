@@ -1,4 +1,4 @@
-import { useScroll, useTransform, motion, useInView } from "motion/react";
+import { motion, useInView } from "motion/react";
 import SectionTitle from "../common/sectionTitle";
 import ExpCard from "./expCard";
 import { experience } from "@/constants/experience";
@@ -7,11 +7,6 @@ import { Link } from "react-router-dom";
 import { Card } from "../common/card";
 
 export default function Experience() {
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0.5, 1], [0, -100]);
-
-  console.log(y);
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

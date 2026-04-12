@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 
 import Particles from "../common/particles";
 import HeroText from "./heroText";
@@ -14,6 +14,9 @@ const cards = [
 ];
 
 export default function Hero() {
+  const prefersReducedMotion = useReducedMotion();
+  const particleQuantity = prefersReducedMotion ? 25 : 70;
+
   return (
     <section className="h-screen relative overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <div className="flex-center flex-col h-screen container mx-auto">
@@ -25,7 +28,7 @@ export default function Hero() {
 
         <Particles
           className="absolute inset-0 -z-10 animate-fade-in"
-          quantity={100}
+          quantity={particleQuantity}
         />
 
         <HeroText />

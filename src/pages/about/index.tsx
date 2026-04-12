@@ -1,7 +1,7 @@
 import photo from "/images/profile/profile_1.webp";
 import Timeline from "@/components/common/timeline";
 
-import { lazy, useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { timelineData } from "@/constants/timeline";
 import SkillsetCard from "@/components/about/skillsetCard";
 import { Link } from "react-router-dom";
@@ -96,7 +96,16 @@ function About() {
             <h3 className="text-xl font-display text-zinc-500 mb-6 px-4 lg:px-6">
               ✔️ Contributions
             </h3>
-            <GitGraph />
+            <Suspense
+              fallback={
+                <div className="flex items-center justify-center text-sm text-gray-600 font-mono space-x-2 w-full px-4">
+                  <span className="w-2 h-2 rounded-full bg-gray-300 animate-pulse"></span>
+                  <span>Loading chart...</span>
+                </div>
+              }
+            >
+              <GitGraph />
+            </Suspense>
           </div>
 
           {/* Work together */}
