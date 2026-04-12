@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/chart";
 import { Bar, BarChart, XAxis } from "recharts";
 import { useEffect, useState } from "react";
-import { Suspense } from "react";
 
 // API fetch function
 let cache: { month: string; commit: number }[] | null = null;
@@ -15,7 +14,7 @@ async function getChartData() {
   if (cache) return cache;
 
   const res = await fetch(
-    "https://github-contributions-api.jogruber.de/v4/Ovee-Hasnat?y=last",
+    "https://github-contributions-api.jogruber.de/v4/abuhasnat-cb?y=last",
     { cache: "force-cache" }
   );
   if (!res.ok) throw new Error("Failed to fetch chart data");
@@ -120,9 +119,5 @@ function ChartContent() {
 }
 
 export default function GitGraph() {
-  return (
-    <Suspense fallback={<div>Loading chart...</div>}>
-      <ChartContent />
-    </Suspense>
-  );
+  return <ChartContent />;
 }
